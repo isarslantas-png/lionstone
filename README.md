@@ -41,10 +41,12 @@ Most "AI editors" either chop every silence (and your sentences with it) or send
 ## 🚀 Quick start
 
 ```bash
-# 1. FFmpeg (5+)
-brew install ffmpeg            # macOS
-sudo apt install ffmpeg        # Ubuntu / Debian
-winget install ffmpeg          # Windows
+# 1. FFmpeg (5+) — any build works; titles/burned captions need libfreetype + libass
+sudo apt install ffmpeg                  # Ubuntu / Debian (full build)
+winget install ffmpeg                    # Windows (full build)
+conda install -c conda-forge ffmpeg      # macOS / anywhere (full build)
+# brew install ffmpeg also works; if `lionstone doctor` reports drawtext/subtitles
+# missing, Lionstone still edits but skips titles & burn-in (and says so in qa.md)
 
 # 2. Lionstone (+ local Whisper transcription)
 pip install "lionstone[whisper] @ git+https://github.com/isarslantas-png/lionstone"
