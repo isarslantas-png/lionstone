@@ -65,3 +65,21 @@ def test_cuts_restore_roundtrip(clip: Path, tmp_path: Path):
     after = json.loads(plan_path.read_text())
     dur = lambda p: sum(s["end"] - s["start"] for s in p["segments"])
     assert dur(after) > dur(before)
+
+
+def test_degrades_without_drawtext_and_libass(clip: Path, tmp_path: Path, monkeypatch):
+    """Builds without libfreetype/libass (e.g. Homebrew) must still deliver, and say so."""
+    import lionstone.ff as ff
+    import lionstone.render as render
+    monkeypatch.setattr(render, "has_filter", lambda name: name not in ("drawtext", "subtitles"))
+    out = tmp_path / "o3"
+    words = tmp_path / "w.json"
+    words.write_text(json.dumps({"words": [{"word": "hello.", "start": 1.3, "end": 1.9}]}))
+    code = main(["edit", str(clip), "-o", str(out), "--fast", "--transcript", str(words),
+                 "--title", "Başlık", "--renderer", "ffmpeg"])
+    assert code == 0
+    qa = json.loads((out / "qa.json").read_text())
+    names = {i["check"] for i in qa["issues"]}
+    assert {"graphics_rendered", "captions_burn"} <= names
+    assert (out / "talk.edit.srt").exists()
+    assert ff.has_filter("loudnorm")
