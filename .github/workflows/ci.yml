@@ -1,0 +1,41 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ["3.10", "3.12", "3.13"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Install FFmpeg
+        run: |
+          if [ "$RUNNER_OS" = "Linux" ]; then sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core; else brew install ffmpeg; fi
+      - run: pip install -e ".[dev,mcp]"
+      - run: ruff check src tests
+      - run: pytest -q
+
+  remotion:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: remotion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: remotion/package-lock.json
+      - run: npm ci
+      - run: npm run typecheck
