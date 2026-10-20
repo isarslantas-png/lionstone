@@ -32,6 +32,27 @@ def run(args: list[str], *, check: bool = True, capture: bool = True,
     return proc
 
 
+_FILTERS: set[str] | None = None
+
+
+def filters() -> set[str]:
+    """Names of the filters this FFmpeg build provides (cached).
+
+    Some builds (e.g. recent Homebrew bottles) ship without libfreetype/libass,
+    so `drawtext` / `subtitles` may be missing. Callers degrade gracefully.
+    """
+    global _FILTERS
+    if _FILTERS is None:
+        out = run(["ffmpeg", "-hide_banner", "-filters"], check=False).stdout or ""
+        _FILTERS = {parts[1] for line in out.splitlines()
+                    if len(parts := line.split()) > 2 and "->" in parts[2]}
+    return _FILTERS
+
+
+def has_filter(name: str) -> bool:
+    return name in filters()
+
+
 def ffprobe_json(path: str | Path) -> dict:
     proc = run([
         "ffprobe", "-v", "error", "-print_format", "json",

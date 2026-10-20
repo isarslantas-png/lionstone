@@ -194,6 +194,28 @@ def renormalize(path: Path, profile: str) -> None:
     shutil.move(tmp, path)
 
 
+def _render_checks(report: QAReport, res: RenderResult) -> None:
+    """Surface what the renderer could not do as QA findings (never silently)."""
+    from .models import QACheck, QAIssue
+    skipped = [g for g in res.graphics_log if g.get("status") == "skipped"]
+    fallback = [g for g in res.graphics_log if g.get("status") in ("fallback", "blocked")]
+    if res.graphics_log:
+        status = "warning" if skipped or fallback else "passed"
+        report.checks.append(QACheck(
+            "graphics_rendered", "technical", status,
+            f"{len(res.graphics_log) - len(skipped)}/{len(res.graphics_log)} graphics rendered"
+            + (f", {len(fallback)} via fallback" if fallback else "")))
+        for g in skipped:
+            report.issues.append(QAIssue("graphics_rendered", "medium",
+                                         f"{g['effect']} not rendered: {g.get('detail', '')}"))
+        for g in fallback:
+            report.issues.append(QAIssue("graphics_rendered", "low",
+                                         f"{g['effect']}: {g.get('detail', 'fallback used')}"))
+    for n in res.notes:
+        if "not burned in" in n:
+            report.issues.append(QAIssue("captions_burn", "medium", n))
+
+
 def render_and_verify(plan: EditPlan, outdir: Path, out_name: str, ropts: RenderOptions, *,
                       catalog: Catalog, log: Log = _default_log, max_rounds: int = 2
                       ) -> tuple[RenderResult, QAReport]:
@@ -213,6 +235,7 @@ def render_and_verify(plan: EditPlan, outdir: Path, out_name: str, ropts: Render
         report = qa_mod.run_qa(out, plan, catalog=catalog,
                                expect={"duration": res.duration, "width": W, "height": H,
                                        "fps": fps})
+        _render_checks(report, res)
         high = [i for i in report.issues if i.severity in ("critical", "high")]
         if not high or rounds > max_rounds:
             break

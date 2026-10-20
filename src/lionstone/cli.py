@@ -224,6 +224,12 @@ def cmd_effects(a: argparse.Namespace) -> int:
         return 0
     # preview: render the effect over a neutral backdrop with FFmpeg
     e = cat.get(a.id)
+    from .ff import has_filter
+    if not has_filter("drawtext"):
+        print("This FFmpeg build has no `drawtext` (libfreetype). Install a full build "
+              "(e.g. `conda install -c conda-forge ffmpeg`) or preview in Remotion: "
+              "cd remotion && npm install && npm run studio", file=sys.stderr)
+        return 1
     out = Path(a.output or f"preview-{e.id}.mp4").resolve()
     wd = out.parent / ".lionstone-preview"
     wd.mkdir(parents=True, exist_ok=True)

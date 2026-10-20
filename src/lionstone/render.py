@@ -17,7 +17,7 @@ from .captions import write_captions
 from .color import color_chain, measure_luma
 from .effects import Catalog
 from .effects.ffmpeg_fx import FxContext, build_graphics
-from .ff import font_path, run
+from .ff import font_path, has_filter, run
 from .ingest import probe
 from .models import EditPlan, MediaInfo
 from .plugins import registry
@@ -224,7 +224,15 @@ def build_graph(plan: EditPlan, info: MediaInfo, opts: RenderOptions, workdir: P
                              "engine": "remotion"})
             else:
                 native.append(ev)
-        if native:
+        if native and not has_filter("drawtext"):
+            # Safe default (spec §3.8): never fail the whole render over a title.
+            for ev in native:
+                glog.append({"event": ev.id, "effect": ev.effect, "status": "skipped",
+                             "detail": "FFmpeg build has no drawtext (libfreetype) and "
+                                       "Remotion is not set up"})
+            meta["notes"].append(f"{len(native)} graphic(s) not rendered: this FFmpeg lacks "
+                                 "`drawtext`. Install a full FFmpeg build or set up Remotion.")
+        elif native:
             ctx = FxContext(width=W, height=H, fps=fps, font=font_path(opts.font),
                             workdir=workdir, accent=opts.accent.replace("#", "0x"))
             gparts, cur, nlog = build_graphics(native, catalog, cur, ctx, reg.tiers)
@@ -233,7 +241,13 @@ def build_graph(plan: EditPlan, info: MediaInfo, opts: RenderOptions, workdir: P
             meta["notes"] += ctx.notes
         meta["graphics_log"] = glog
 
-    if opts.captions == "burn" and plan.words:
+    burn = opts.captions == "burn" and plan.words
+    if burn and not has_filter("subtitles"):
+        meta["notes"].append("captions delivered as SRT/VTT only: this FFmpeg lacks libass "
+                             "(`subtitles` filter), so they were not burned in")
+        burn = False
+    meta["captions_burned"] = bool(burn)
+    if burn:
         parts.append(f"[{cur}]subtitles=filename='captions.ass'[vout]")
     else:
         parts.append(f"[{cur}]null[vout]")
