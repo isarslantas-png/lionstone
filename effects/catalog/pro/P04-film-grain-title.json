@@ -1,0 +1,42 @@
+{
+  "id": "P04",
+  "name": "Film Grain Title",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "cinematic",
+    "documentary"
+  ],
+  "description": "Soft film texture, gentle vignette and warm light behind a readable title.",
+  "use": [
+    "intro",
+    "chapter"
+  ],
+  "duration": {
+    "enter": 1.5,
+    "hold": 3.0,
+    "exit": 0.8
+  },
+  "parameters": {
+    "grain": 0.35,
+    "vignette": 0.4,
+    "warmth": 0.03,
+    "fontSize": 0.07
+  },
+  "constraints": {
+    "minDuration": 3.0,
+    "maxDuration": 8.0,
+    "safeArea": true,
+    "minFontPx": 36
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "FilmGrainTitle",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P04.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

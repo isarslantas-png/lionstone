@@ -1,0 +1,29 @@
+name: 🐛 Bug report
+description: Something was cut wrong, failed to render, or QA missed a problem
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you expected vs. what you got. Timestamps help a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: cmd
+    attributes:
+      label: Command
+      render: shell
+      placeholder: lionstone edit talk.mp4 --intensity balanced …
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `lionstone doctor`
+      render: text
+  - type: textarea
+    id: files
+    attributes:
+      label: plan.json / qa.md
+      description: Attach them (or the relevant part). A short sample clip is gold.

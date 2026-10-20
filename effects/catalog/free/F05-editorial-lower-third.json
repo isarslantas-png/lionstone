@@ -1,0 +1,43 @@
+{
+  "id": "F05",
+  "name": "Editorial Lower Third",
+  "category": "lower_third",
+  "tier": "free",
+  "style": [
+    "minimal",
+    "editorial",
+    "corporate"
+  ],
+  "description": "Name + title on a quiet translucent plate, inside the action-safe area.",
+  "use": [
+    "speaker_intro"
+  ],
+  "duration": {
+    "enter": 0.6,
+    "hold": 4.0,
+    "exit": 0.5
+  },
+  "parameters": {
+    "plateOpacity": 0.55,
+    "accentBar": true,
+    "nameSize": 0.042,
+    "titleSize": 0.028,
+    "position": "bottom-left"
+  },
+  "constraints": {
+    "minDuration": 3.0,
+    "maxDuration": 7.0,
+    "safeArea": true,
+    "minFontPx": 22
+  },
+  "fallback": "simple_fade",
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "supportsPreview": true,
+  "composition": "EditorialLowerThird",
+  "license": {
+    "code": "Apache-2.0",
+    "assets": "bundled fonts: system / OFL only"
+  },
+  "preview": "assets/effects/F05.gif"
+}

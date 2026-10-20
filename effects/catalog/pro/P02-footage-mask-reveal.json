@@ -1,0 +1,41 @@
+{
+  "id": "P02",
+  "name": "Footage Mask Reveal",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "cinematic"
+  ],
+  "description": "Moving footage plays inside the letters, then opens to the full scene.",
+  "use": [
+    "intro",
+    "chapter",
+    "brand"
+  ],
+  "duration": {
+    "enter": 1.6,
+    "hold": 2.0,
+    "exit": 0.8
+  },
+  "parameters": {
+    "fontSize": 0.2,
+    "openScale": 14
+  },
+  "constraints": {
+    "minDuration": 3.0,
+    "maxDuration": 7.0,
+    "safeArea": true,
+    "minFontPx": 120,
+    "fullFrame": true
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "FootageMaskReveal",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P02.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

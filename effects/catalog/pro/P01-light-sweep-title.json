@@ -1,0 +1,41 @@
+{
+  "id": "P01",
+  "name": "Light Sweep Title",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "cinematic"
+  ],
+  "description": "A controlled sheen sweeps across the title. Brand films and premium launches.",
+  "use": [
+    "intro",
+    "brand"
+  ],
+  "duration": {
+    "enter": 1.3,
+    "hold": 3.0,
+    "exit": 0.6
+  },
+  "parameters": {
+    "sweepAngle": 20,
+    "sweepWidth": 0.18,
+    "intensity": 0.85,
+    "fontSize": 0.08
+  },
+  "constraints": {
+    "minDuration": 2.0,
+    "maxDuration": 8.0,
+    "safeArea": true,
+    "minFontPx": 40
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "LightSweepTitle",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P01.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

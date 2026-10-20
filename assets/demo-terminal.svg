@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="578" viewBox="0 0 1100 578" role="img" aria-label="Lionstone CLI run">
+<rect width="1100" height="578" rx="14" fill="#141418"/>
+<rect width="1100" height="36" rx="14" fill="#1f1f25"/><rect y="22" width="1100" height="14" fill="#1f1f25"/>
+<circle cx="22" cy="18" r="6" fill="#ff5f57"/><circle cx="42" cy="18" r="6" fill="#febc2e"/><circle cx="62" cy="18" r="6" fill="#28c840"/>
+<text x="550" y="23" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="13" fill="#8d877e">lionstone — zsh</text>
+<text x="22" y="56" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#E8B04B" xml:space="preserve">$ lionstone edit podcast_ep12.mp4 --transcript words.json --title "Episode 12" \</text>
+<text x="22" y="78" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#E8B04B" xml:space="preserve">    --speaker "Ayşe Yılmaz|Founder, Studio Nine"</text>
+<text x="22" y="100" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#E8B04B" xml:space="preserve">🦁 Lionstone — AI editing agent · v0.1.0</text>
+<text x="22" y="122" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">① Ingest — validating media</text>
+<text x="22" y="144" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   podcast_ep12.mp4  ·  16.80s  ·  mov,mp4,m4a,3gp,3g2,mj2</text>
+<text x="22" y="166" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">     video  h264 1280x720 @ 30.000 fps</text>
+<text x="22" y="188" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">     audio  aac 48000 Hz × 1 ch</text>
+<text x="22" y="210" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">② Speech — transcribing with word timestamps</text>
+<text x="22" y="232" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   transcript loaded from words.json</text>
+<text x="22" y="254" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">③ Signal — detecting silence</text>
+<text x="22" y="276" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   4 silent intervals</text>
+<text x="22" y="298" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">④ Decide — building balanced edit plan</text>
+<text x="22" y="320" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   16.8s → 10.9s (−5.9s, 35%) · 1 filler · 1 repeat · 4 silence · 2 graphics</text>
+<text x="22" y="342" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">⑤ Render — pass 1</text>
+<text x="22" y="364" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   podcast_ep12.edit.mp4 · 1280x720 @ 30.0 · 10.9s in 8s</text>
+<text x="22" y="386" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#FFFFFF" xml:space="preserve">⑥ QA — technical + editorial checks</text>
+<text x="22" y="408" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">   15 checks run, 2 skipped (reported) · no issues</text>
+<text x="22" y="430" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#7FD18B" xml:space="preserve">   QA: deliverable ✅ · report → qa.md</text>
+<text x="22" y="452" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve"></text>
+<text x="22" y="474" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#7FD18B" xml:space="preserve">Delivered → demo/podcast_ep12.edit.mp4</text>
+<text x="22" y="496" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">            demo/podcast_ep12.edit.srt</text>
+<text x="22" y="518" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">            demo/podcast_ep12.edit.vtt</text>
+<text x="22" y="540" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15" fill="#B9B3AA" xml:space="preserve">QA report → demo/qa.md</text>
+</svg>

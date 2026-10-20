@@ -1,0 +1,43 @@
+{
+  "id": "P06",
+  "name": "Signature Brand Reveal",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "cinematic",
+    "corporate"
+  ],
+  "description": "Logo, brand name and fine graphic lines animate in as a signature open/close.",
+  "use": [
+    "brand",
+    "intro",
+    "outro"
+  ],
+  "duration": {
+    "enter": 1.6,
+    "hold": 1.6,
+    "exit": 0.6
+  },
+  "parameters": {
+    "logo": "",
+    "lineCount": 2,
+    "fontSize": 0.06
+  },
+  "constraints": {
+    "minDuration": 2.0,
+    "maxDuration": 4.5,
+    "safeArea": true,
+    "minFontPx": 32,
+    "fullFrame": true
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "SignatureBrandReveal",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P06.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

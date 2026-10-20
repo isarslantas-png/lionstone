@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lionstone": {
+      "command": "lionstone",
+      "args": ["mcp"]
+    }
+  }
+}

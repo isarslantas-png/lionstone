@@ -1,0 +1,15 @@
+name: 💡 Feature request
+description: An editing problem Lionstone should solve
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The editing problem
+      description: Describe the situation (content type, length, cameras) and what slows you down.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How should Lionstone handle it?

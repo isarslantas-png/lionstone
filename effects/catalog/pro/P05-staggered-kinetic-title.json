@@ -1,0 +1,41 @@
+{
+  "id": "P05",
+  "name": "Staggered Kinetic Title",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "dynamic",
+    "social"
+  ],
+  "description": "Words land one after another with small offsets. Emphasis moments and key ideas.",
+  "use": [
+    "keypoint",
+    "chapter"
+  ],
+  "duration": {
+    "enter": 1.2,
+    "hold": 2.6,
+    "exit": 0.5
+  },
+  "parameters": {
+    "stagger": 0.12,
+    "rise": 0.04,
+    "fontSize": 0.075
+  },
+  "constraints": {
+    "minDuration": 2.0,
+    "maxDuration": 6.0,
+    "safeArea": true,
+    "minFontPx": 40
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "StaggeredKineticTitle",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P05.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "F03",
+  "name": "Line Reveal",
+  "category": "title",
+  "tier": "free",
+  "style": [
+    "minimal",
+    "corporate"
+  ],
+  "description": "A thin rule opens horizontally under the title. Corporate videos and talk sections.",
+  "use": [
+    "chapter",
+    "keypoint"
+  ],
+  "duration": {
+    "enter": 1.0,
+    "hold": 3.0,
+    "exit": 0.5
+  },
+  "parameters": {
+    "lineWidth": 0.28,
+    "lineThickness": 4,
+    "lineColor": "accent",
+    "easing": "easeInOut",
+    "fontSize": 0.065
+  },
+  "constraints": {
+    "minDuration": 1.5,
+    "maxDuration": 8.0,
+    "safeArea": true,
+    "minFontPx": 26
+  },
+  "fallback": "simple_fade",
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "supportsPreview": true,
+  "composition": "LineReveal",
+  "license": {
+    "code": "Apache-2.0",
+    "assets": "bundled fonts: system / OFL only"
+  },
+  "preview": "assets/effects/F03.gif"
+}

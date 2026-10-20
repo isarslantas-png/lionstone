@@ -1,0 +1,179 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/isarslantas-png/lionstone/schemas/edit-plan.schema.json",
+  "title": "Lionstone EditPlan",
+  "type": "object",
+  "required": [
+    "version",
+    "source",
+    "duration",
+    "intensity",
+    "segments",
+    "cuts",
+    "graphics"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "number",
+      "minimum": 0
+    },
+    "intensity": {
+      "enum": [
+        "natural",
+        "balanced",
+        "dynamic"
+      ]
+    },
+    "audio_profile": {
+      "enum": [
+        "youtube",
+        "podcast",
+        "social",
+        "broadcast"
+      ]
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "start",
+          "end"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          },
+          "source": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "cuts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "start",
+          "end",
+          "kind",
+          "reason"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "start": {
+            "type": "number"
+          },
+          "end": {
+            "type": "number"
+          },
+          "kind": {
+            "enum": [
+              "silence",
+              "filler",
+              "repeat",
+              "false_start",
+              "transcript",
+              "manual",
+              "mixed"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "enabled": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "graphics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "effect",
+          "at",
+          "duration",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          },
+          "at": {
+            "type": "number"
+          },
+          "duration": {
+            "type": "number"
+          },
+          "text": {
+            "type": "string"
+          },
+          "subtext": {
+            "type": "string"
+          },
+          "params": {
+            "type": "object"
+          },
+          "layer": {
+            "enum": [
+              "titles",
+              "lower_thirds",
+              "captions"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "words": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "text",
+          "start",
+          "end"
+        ]
+      }
+    },
+    "color": {
+      "type": "object"
+    },
+    "meta": {
+      "type": "object"
+    }
+  }
+}

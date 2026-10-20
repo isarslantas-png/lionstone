@@ -1,0 +1,41 @@
+{
+  "id": "P03",
+  "name": "Depth Parallax Title",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "cinematic",
+    "documentary"
+  ],
+  "description": "Title and background drift at different speeds for a sense of depth.",
+  "use": [
+    "intro",
+    "chapter"
+  ],
+  "duration": {
+    "enter": 1.4,
+    "hold": 3.0,
+    "exit": 0.6
+  },
+  "parameters": {
+    "bgZoom": 1.08,
+    "titleDrift": 0.025,
+    "fontSize": 0.075
+  },
+  "constraints": {
+    "minDuration": 2.5,
+    "maxDuration": 8.0,
+    "safeArea": true,
+    "minFontPx": 36
+  },
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "composition": "DepthParallaxTitle",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "assets/effects/P03.gif",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "bundled fonts: OFL only"
+  }
+}

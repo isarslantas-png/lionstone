@@ -1,0 +1,43 @@
+{
+  "id": "F04",
+  "name": "Chapter Card",
+  "category": "title",
+  "tier": "free",
+  "style": [
+    "cinematic",
+    "minimal",
+    "corporate"
+  ],
+  "description": "Full-frame card with chapter number and title. Clean topic transitions.",
+  "use": [
+    "chapter"
+  ],
+  "duration": {
+    "enter": 0.6,
+    "hold": 2.4,
+    "exit": 0.5
+  },
+  "parameters": {
+    "background": "#0E0E10",
+    "numberColor": "accent",
+    "showNumber": true,
+    "fontSize": 0.08
+  },
+  "constraints": {
+    "minDuration": 2.5,
+    "maxDuration": 4.5,
+    "safeArea": true,
+    "minFontPx": 32,
+    "fullFrame": true
+  },
+  "fallback": "simple_fade",
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "supportsPreview": true,
+  "composition": "ChapterCard",
+  "license": {
+    "code": "Apache-2.0",
+    "assets": "bundled fonts: system / OFL only"
+  },
+  "preview": "assets/effects/F04.gif"
+}

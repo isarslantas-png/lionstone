@@ -1,0 +1,44 @@
+{
+  "id": "F01",
+  "name": "Cinematic Fade",
+  "category": "title",
+  "tier": "free",
+  "style": [
+    "cinematic",
+    "minimal"
+  ],
+  "description": "Soft opacity fade with optional background dim. For video openings and chapter titles.",
+  "use": [
+    "intro",
+    "chapter",
+    "outro"
+  ],
+  "duration": {
+    "enter": 1.2,
+    "hold": 3.0,
+    "exit": 0.6
+  },
+  "parameters": {
+    "opacityFrom": 0,
+    "opacityTo": 1,
+    "easing": "easeOut",
+    "dimBackground": 0.35,
+    "fontSize": 0.075
+  },
+  "constraints": {
+    "minDuration": 1.0,
+    "maxDuration": 8.0,
+    "safeArea": true,
+    "minFontPx": 28
+  },
+  "fallback": "simple_fade",
+  "renderEngine": "remotion",
+  "fallbackEngine": "ffmpeg",
+  "supportsPreview": true,
+  "composition": "CinematicFade",
+  "license": {
+    "code": "Apache-2.0",
+    "assets": "bundled fonts: system / OFL only"
+  },
+  "preview": "assets/effects/F01.gif"
+}
