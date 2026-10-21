@@ -43,7 +43,7 @@ def test_unknown_effect():
 
 def test_filter_path_escapes_drive_letter():
     from lionstone.effects.ffmpeg_fx import filter_path
-    assert filter_path("C:\\Windows\\Fonts\\arialbd.ttf") == r"C\\:/Windows/Fonts/arialbd.ttf"
+    assert filter_path("C:/Windows/Fonts/arialbd.ttf") == r"C\\:/Windows/Fonts/arialbd.ttf"
     assert filter_path("/tmp/it's [1].png") == r"/tmp/it\\\'s \[1\].png"
     assert filter_path("/usr/share/fonts/DejaVuSans.ttf") == "/usr/share/fonts/DejaVuSans.ttf"
 
