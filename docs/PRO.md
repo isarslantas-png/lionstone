@@ -1,13 +1,15 @@
 # Lionstone Pro & Studio
 
-Pro is a plugin for the open-source core. Install it next to `lionstone`, activate your key once, and the extra commands and effects unlock. Everything still runs locally.
+Pro is a plugin for the open-source core. Install it next to `lionstone`, activate your key, and the extra commands and effects unlock. Everything still runs locally.
 
-| Plan | For | Suggested price* |
+| Plan | For | Price* |
 |---|---|---|
-| **Pro** | creators and editors who publish every week | $12 / month · $99 / year |
-| **Studio** | agencies & teams (5 seats, multiple brands, batch) | $39 / month · $349 / year |
+| **Pro** | creators and editors who publish every week (1 person) | $12 / month · $99 / year |
+| **Studio** | agencies & teams: the same features for 5 people + a 30-minute onboarding call | $39 / month · $349 / year |
 
 <sub>*Launch pricing. Students, non-profits and open-source maintainers: ask for a free key.</sub>
+
+Memberships renew automatically. Each payment emails you a fresh key (valid for the paid month or year plus 7 days); activate it with `lionstone pro activate`. If you cancel, your last key keeps working until it expires.
 
 **→ [Buy a license](https://ismailarslantas.com)** <!-- TODO: replace with your Lemon Squeezy / Gumroad checkout URL -->
 
@@ -28,7 +30,7 @@ Pro is a plugin for the open-source core. Install it next to `lionstone`, activa
 
 ```bash
 pip install "lionstone-pro @ <private download link from your receipt>"
-lionstone pro activate LSP1.xxxxx.yyyyy
+lionstone pro activate LSP1.xxxxx.yyyyy   # Studio keys start with LSS1.
 lionstone pro status
 lionstone pro setup-remotion   # optional, needs Node.js 18+: Remotion-quality P01–P06
 ```
