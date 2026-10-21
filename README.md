@@ -157,7 +157,12 @@ The free version is a complete editor — not a demo. Pro is for people who edit
 | **Project export**: FCPXML (Resolve / Final Cut) + EDL (Premiere) | | ✅ | ✅ |
 | **Vision QA**: graphics/captions covering faces | | ✅ | ✅ |
 | Natural / Cinematic / Dynamic variants side by side | | ✅ | ✅ |
-| Seats · batch processing · brand profiles · priority support | | 1 | 5+ |
+| **Creative Suite (new in 0.2)**: 28 looks, 19 effects, 11 transitions, 6 motion presets, 25 animated text presets, karaoke captions, real previews | | ✅ | ✅ |
+| **Lionstone Agent** picks looks, emphasis and transitions — and explains every choice | | ✅ | ✅ |
+| **Brand kits**, versioned & locked team presets, roles, batch apply across episodes | | | ✅ |
+| Seats | | 1 | 5 |
+
+![Lionstone Pro 0.2 — same shot, six looks](docs/img/pro-looks-1280x720.png)
 
 Pro runs **on your machine** with an offline license key — no account, no upload, no telemetry. → **[Get Lionstone Pro](docs/PRO.md)**
 
