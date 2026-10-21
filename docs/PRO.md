@@ -5,7 +5,9 @@ Pro is a plugin for the open-source core. Install it next to `lionstone`, activa
 | Plan | For | Price* |
 |---|---|---|
 | **Pro** | creators and editors who publish every week (1 person) | $12 / month · $99 / year |
-| **Studio** | agencies & teams: the same features for 5 people + a 30-minute onboarding call | $39 / month · $349 / year |
+| **Studio** | agencies & teams: the same features, licensed for 5 people | $39 / month · $349 / year |
+
+Both plans include an illustrated installation guide (PDF) for Windows, macOS and Linux.
 
 <sub>*Launch pricing. Students, non-profits and open-source maintainers: ask for a free key.</sub>
 
