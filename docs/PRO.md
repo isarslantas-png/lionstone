@@ -1,11 +1,13 @@
 # Lionstone Pro & Studio
 
+![Lionstone Pro](img/pro-banner-1280x640.png)
+
 Pro is a plugin for the open-source core. Install it next to `lionstone`, activate your key, and the extra commands and effects unlock. Everything still runs locally.
 
 | Plan | For | Price* |
 |---|---|---|
 | **Pro** | creators and editors who publish every week (1 person) | $12 / month · $99 / year |
-| **Studio** | agencies & teams: the same features, licensed for 5 people | $39 / month · $349 / year |
+| **Studio** | agencies & teams: everything in Pro plus brand kits, roles, versioned team presets and batch apply — 5 people | $39 / month · $349 / year |
 
 Both plans include an illustrated installation guide (PDF) for Windows, macOS and Linux.
 
@@ -13,7 +15,7 @@ Both plans include an illustrated installation guide (PDF) for Windows, macOS an
 
 Memberships renew automatically. Each payment emails you a fresh key (valid for the paid month or year plus 7 days); activate it with `lionstone pro activate`. If you cancel, your last key keeps working until it expires.
 
-**→ [Buy a license](https://ismailarslantas.com)** <!-- TODO: replace with your Lemon Squeezy / Gumroad checkout URL -->
+**→ [Buy Lionstone Pro](https://aidijitalakademi.gumroad.com/l/lionstone-pro) · [Buy Lionstone Studio](https://aidijitalakademi.gumroad.com/l/lionstone-studio)**
 
 ## What you get
 
@@ -27,6 +29,36 @@ Memberships renew automatically. Each payment emails you a fresh key (valid for 
 | Pro effects P01–P06 | Light Sweep, Footage Mask Reveal, Depth Parallax, Film Grain, Staggered Kinetic, Signature Brand Reveal — Remotion quality, FFmpeg fallbacks for P03–P06. |
 | Vision QA | Flags lower thirds, titles or captions that cover a face. |
 | `--reframe face` | Face-following crop for 9:16 / 1:1 / 4:5. |
+
+## New in 0.2 — Creative Suite (Pro & Studio)
+
+![What's new in Pro 0.2](img/pro-features-1280x720.png)
+
+Original Lionstone looks, effects, transitions, motion and animated text — previewed before you commit and rendered with the exact same code.
+
+| Command | What it does |
+|---|---|
+| `lionstone fx list --kind look` · `lionstone fx show soft-bloom` | Browse 133 presets with tier, status, cost and licence. Favourites and search included. |
+| `lionstone fx preview soft-bloom --before-after --gif` | Real low-res preview with the export builders; locked presets preview with a watermark. |
+| `lionstone fx apply plan.json dip-to-black --join 2` | Put a look, effect, transition or motion preset on the whole video, a segment, a cut or a source range. Keyframes with 6 easing curves. |
+| `lionstone fx text plan.json counter-up --text "Customers" --at 12 --param to=250` | 25 animated text presets — Word Pop, Counter Up, Price Reveal, Stat, Location/Speaker labels, CTA, Type-on, End Card — plus karaoke captions. |
+| `lionstone fx auto plan.json --content vlog --style social` | Lionstone Agent picks one consistent look, emphasis zooms and transitions on real topic changes, within budgets — with a reason for every decision. |
+| `lionstone fx render plan.json` | Compile + render + QA (flash limit ≤ 3/s, exposure, saturation, stale-edit check). |
+
+![Same shot, six looks](img/pro-looks-1280x720.png)
+
+Features that aren't finished yet (two-clip cross dissolves, particles, subject masking) are listed as **planned** in the catalog — never shipped as buttons that do nothing. Text presets need an FFmpeg build with `drawtext`; on builds without it (e.g. Homebrew's default), Lionstone skips them with a clear message.
+
+### Studio: team tools
+
+![Studio for teams](img/studio-features-1280x720.png)
+
+| Command | What it does |
+|---|---|
+| `lionstone team init "ACME"` · `lionstone team member ed@acme.com editor` | Roles: viewer, editor, admin, owner — in a shared folder or git repo. Nothing is uploaded. |
+| `lionstone preset save "ACME Warm" --from look-warm-cinema --team --locked` | Versioned team presets with history and revert; locked company presets only admins can change. |
+| `lionstone brand create kit.json --team` · `lionstone brand apply plan.json ACME` | Brand kits: colors, licensed fonts, logo, lower third, CTA, end card, signature look and transition. |
+| `lionstone fx batch dip-to-black projects/*/plan.json --anchor all-joins` | Apply the same look or transition to a whole season. |
 
 ## Activate
 
