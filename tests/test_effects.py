@@ -41,6 +41,13 @@ def test_unknown_effect():
         Catalog().get("Z99")
 
 
+def test_filter_path_escapes_drive_letter():
+    from lionstone.effects.ffmpeg_fx import filter_path
+    assert filter_path("C:\\Windows\\Fonts\\arialbd.ttf") == r"C\\:/Windows/Fonts/arialbd.ttf"
+    assert filter_path("/tmp/it's [1].png") == r"/tmp/it\\\'s \[1\].png"
+    assert filter_path("/usr/share/fonts/DejaVuSans.ttf") == "/usr/share/fonts/DejaVuSans.ttf"
+
+
 def test_filters():
     cat = Catalog()
     assert all("cinematic" in e.style for e in cat.filter(style="cinematic"))

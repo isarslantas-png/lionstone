@@ -30,6 +30,9 @@ Pro is a plugin for the open-source core. Install it next to `lionstone`, activa
 pip install "lionstone-pro @ <private download link from your receipt>"
 lionstone pro activate LSP1.xxxxx.yyyyy
 lionstone pro status
+lionstone pro setup-remotion   # optional, needs Node.js 18+: Remotion-quality P01–P06
 ```
+
+Without `setup-remotion`, P03–P06 render with their FFmpeg versions and P01/P02 fall back to F01.
 
 Servers / CI: set `LIONSTONE_LICENSE` instead of activating. Keys are verified offline (Ed25519 signatures) — no phone-home.

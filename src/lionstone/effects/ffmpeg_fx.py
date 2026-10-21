@@ -10,6 +10,7 @@ label, so effects compose on top of each other in one pass.
 
 from __future__ import annotations
 
+import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -42,7 +43,18 @@ class FxContext:
         return p.name  # FFmpeg runs with cwd=workdir; quoted values must stay unescaped
 
     def fontopt(self) -> str:
-        return f"fontfile='{Path(self.font).as_posix()}':" if self.font else ""
+        return f"fontfile={filter_path(self.font)}:" if self.font else ""
+
+
+def filter_path(path: str | Path) -> str:
+    """A file path as an unquoted filter option value (``fontfile=…``, ``filename=…``).
+
+    FFmpeg unescapes twice: once for the option (``\\ ' :``), once for the
+    filtergraph (``\\ ' [ ] , ;``). Without this the drive letter in
+    ``C:/Windows/Fonts/…`` ends the option on Windows.
+    """
+    s = re.sub(r"([\\':])", r"\\\1", Path(path).as_posix())
+    return re.sub(r"([\\'\[\],;])", r"\\\1", s)
 
 
 def _num(x: float) -> str:
