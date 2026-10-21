@@ -34,5 +34,8 @@ lionstone pro setup-remotion   # optional, needs Node.js 18+: Remotion-quality P
 ```
 
 Without `setup-remotion`, P03–P06 render with their FFmpeg versions and P01/P02 fall back to F01.
+It installs into your user data folder (`%LOCALAPPDATA%\lionstone\pro-remotion` on Windows,
+`~/.local/share/lionstone/pro-remotion` elsewhere). Before `pip uninstall lionstone-pro`, run
+`lionstone pro remove-remotion` to delete it.
 
 Servers / CI: set `LIONSTONE_LICENSE` instead of activating. Keys are verified offline (Ed25519 signatures) — no phone-home.
