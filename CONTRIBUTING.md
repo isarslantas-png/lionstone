@@ -10,7 +10,7 @@ Thanks for helping! The most valuable contributions right now:
 ## Dev setup
 
 ```bash
-git clone https://github.com/isarslantas-png/lionstone && cd lionstone
+git clone https://github.com/ismailarslantas/lionstone && cd lionstone
 pip install -e ".[dev,whisper,mcp]"
 pytest                    # unit + end-to-end (needs ffmpeg)
 ruff check src tests

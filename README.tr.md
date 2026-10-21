@@ -30,7 +30,7 @@
 
 ```bash
 sudo apt install ffmpeg                   # veya: winget install ffmpeg / conda install -c conda-forge ffmpeg
-pip install "lionstone[whisper] @ git+https://github.com/isarslantas-png/lionstone"
+pip install "lionstone[whisper] @ git+https://github.com/ismailarslantas/lionstone"
 lionstone edit podcast.mp4 --language tr --title "12. Bölüm" --speaker "Ayşe Yılmaz|Kurucu"
 ```
 

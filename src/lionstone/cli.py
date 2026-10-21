@@ -104,7 +104,7 @@ def _check_tiers(opts: EditOptions, catalog: Catalog) -> None:
             raise EffectError(
                 f"{fx.id} {fx.name} is a {fx.tier.upper()} effect. Free effects: "
                 f"{', '.join(e.id for e in catalog.filter(tier='free'))}. "
-                "Unlock Pro: https://github.com/isarslantas-png/lionstone/blob/main/docs/PRO.md")
+                "Unlock Pro: https://github.com/ismailarslantas/lionstone/blob/main/docs/PRO.md")
 
 
 # --- commands ------------------------------------------------------------------------

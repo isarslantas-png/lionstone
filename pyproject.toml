@@ -36,9 +36,9 @@ dev = ["pytest>=8", "ruff>=0.5"]
 lionstone = "lionstone.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/isarslantas-png/lionstone"
-Documentation = "https://github.com/isarslantas-png/lionstone/tree/main/docs"
-Issues = "https://github.com/isarslantas-png/lionstone/issues"
+Homepage = "https://github.com/ismailarslantas/lionstone"
+Documentation = "https://github.com/ismailarslantas/lionstone/tree/main/docs"
+Issues = "https://github.com/ismailarslantas/lionstone/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/lionstone"]

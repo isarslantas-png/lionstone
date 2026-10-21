@@ -1,7 +1,7 @@
 # MCP server
 
 ```bash
-pip install "lionstone[mcp,whisper] @ git+https://github.com/isarslantas-png/lionstone"
+pip install "lionstone[mcp,whisper] @ git+https://github.com/ismailarslantas/lionstone"
 lionstone mcp   # stdio
 ```
 

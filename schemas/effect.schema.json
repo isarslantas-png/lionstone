@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/isarslantas-png/lionstone/schemas/effect.schema.json",
+  "$id": "https://github.com/ismailarslantas/lionstone/schemas/effect.schema.json",
   "title": "Lionstone Effect Definition",
   "type": "object",
   "required": ["id", "name", "category", "tier", "style", "duration", "parameters", "constraints", "renderEngine", "supportsPreview", "fallback"],

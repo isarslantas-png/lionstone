@@ -3,12 +3,12 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/isarslantas-png/lionstone/actions"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/isarslantas-png/lionstone/ci.yml?branch=main&label=tests&style=flat-square"></a>
+  <a href="https://github.com/ismailarslantas/lionstone/actions"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/ismailarslantas/lionstone/ci.yml?branch=main&label=tests&style=flat-square"></a>
   <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-E8B04B?style=flat-square"></a>
   <img alt="Python" src="https://img.shields.io/badge/python-3.10%2B-3776AB?style=flat-square">
   <img alt="FFmpeg" src="https://img.shields.io/badge/FFmpeg-powered-007808?style=flat-square">
   <img alt="MCP" src="https://img.shields.io/badge/MCP-server-8A63D2?style=flat-square">
-  <a href="https://github.com/isarslantas-png/lionstone/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/isarslantas-png/lionstone?style=flat-square&color=E8B04B"></a>
+  <a href="https://github.com/ismailarslantas/lionstone/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/ismailarslantas/lionstone?style=flat-square&color=E8B04B"></a>
 </p>
 
 <p align="center">
@@ -49,7 +49,7 @@ conda install -c conda-forge ffmpeg      # macOS / anywhere (full build)
 # missing, Lionstone still edits but skips titles & burn-in (and says so in qa.md)
 
 # 2. Lionstone (+ local Whisper transcription)
-pip install "lionstone[whisper] @ git+https://github.com/isarslantas-png/lionstone"
+pip install "lionstone[whisper] @ git+https://github.com/ismailarslantas/lionstone"
 
 # 3. Edit
 lionstone edit podcast.mp4 --title "Episode 12" --speaker "Ayşe Yılmaz|Founder"
@@ -128,7 +128,7 @@ Remotion titles: `cd remotion && npm install` once — Lionstone picks it up aut
 ## 🤖 Use it from Claude / Cursor (MCP)
 
 ```bash
-pip install "lionstone[mcp,whisper] @ git+https://github.com/isarslantas-png/lionstone"
+pip install "lionstone[mcp,whisper] @ git+https://github.com/ismailarslantas/lionstone"
 ```
 
 ```json
@@ -170,7 +170,7 @@ See [ROADMAP.md](ROADMAP.md). Next up: speaker diarization in the free tier, seg
 PRs welcome — especially filler lexicons for your language, new free effects, and QA checks. Start with [CONTRIBUTING.md](CONTRIBUTING.md); AI coding agents should read [AGENTS.md](AGENTS.md).
 
 ```bash
-git clone https://github.com/isarslantas-png/lionstone && cd lionstone
+git clone https://github.com/ismailarslantas/lionstone && cd lionstone
 pip install -e ".[dev,whisper]" && pytest
 ```
 
