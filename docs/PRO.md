@@ -74,4 +74,6 @@ It installs into your user data folder (`%LOCALAPPDATA%\lionstone\pro-remotion` 
 `~/.local/share/lionstone/pro-remotion` elsewhere). Before `pip uninstall lionstone-pro`, run
 `lionstone pro remove-remotion` to delete it.
 
-Servers / CI: set `LIONSTONE_LICENSE` instead of activating. Keys are verified offline (Ed25519 signatures) — no phone-home.
+Servers / CI: set `LIONSTONE_LICENSE` instead of activating. Keys are verified offline (Ed25519 signatures); there is no telemetry.
+
+Renewals (Pro 0.2.2+): in the last 7 days of a monthly or yearly key, Lionstone asks the license server at most once a day for the next period's key and activates it, so you don't have to paste it. It sends only your current key. `lionstone pro renew` checks right away; `LIONSTONE_NO_RENEW=1` turns it off (renewal keys still arrive by email).
