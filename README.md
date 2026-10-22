@@ -67,6 +67,14 @@ qa.md · qa.json     ← what was checked, what passed, what needs a human
 
 Check your setup any time with `lionstone doctor`.
 
+### 📚 Step-by-step guides (with real screenshots)
+
+| | Guide | You'll learn |
+|---|---|---|
+| ![](docs/guides/img/free-timeline.png) | **[Your first video (free)](docs/guides/free.md)** | install, one-command edit, captions, reading the QA report, editing by text, restoring cuts |
+| ![](docs/guides/img/pro-shorts.png) | **[Finishing with Pro](docs/guides/pro.md)** | the agent, looks / transitions / animated text, previews, Shorts & Reels, Resolve / Final Cut / Premiere export |
+| ![](docs/guides/img/studio-result.jpg) | **[Teams with Studio](docs/guides/studio.md)** | roles per person, brand kits, locked presets with history, batch apply for a season |
+
 ## 🧭 How it works
 
 ```mermaid
@@ -161,6 +169,8 @@ The free version is a complete editor — not a demo. Pro is for people who edit
 | **Lionstone Agent** picks looks, emphasis and transitions — and explains every choice | | ✅ | ✅ |
 | **Brand kits**, versioned & locked team presets, roles, batch apply across episodes | | | ✅ |
 | Seats | | 1 | 5 |
+
+![Pick your plan: Free, Pro, Studio](docs/img/plans-022-1280x720.png)
 
 ![Lionstone Pro 0.2 — same shot, six looks](docs/img/pro-looks-1280x720.png)
 

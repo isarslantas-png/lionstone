@@ -26,10 +26,10 @@ classifiers = [
 dependencies = []  # core runs on the standard library + FFmpeg
 
 [project.optional-dependencies]
-whisper = ["faster-whisper>=1.0"]
+whisper = ["faster-whisper>=1.0", "av<19"]  # faster-whisper 1.2 passes metadata_errors, removed in PyAV 19
 mcp = ["mcp>=1.2"]
 rich = ["rich>=13"]
-all = ["faster-whisper>=1.0", "mcp>=1.2", "rich>=13"]
+all = ["faster-whisper>=1.0", "av<19", "mcp>=1.2", "rich>=13"]
 dev = ["pytest>=8", "ruff>=0.5"]
 
 [project.scripts]

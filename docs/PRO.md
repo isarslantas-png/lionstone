@@ -13,9 +13,23 @@ Both plans include an illustrated installation guide (PDF) for Windows, macOS an
 
 <sub>*Launch pricing. Students, non-profits and open-source maintainers: ask for a free key.</sub>
 
-Memberships renew automatically. Each payment emails you a fresh key (valid for the paid month or year plus 7 days); activate it with `lionstone pro activate`. If you cancel, your last key keeps working until it expires.
+Memberships renew automatically, and so does your key: each key is valid for the paid month or year plus 7 days, and in its last days Lionstone (0.2.2+) fetches the next one by itself. The new key is also emailed as a backup. If you cancel, your last key keeps working until it expires.
 
 **→ [Buy Lionstone Pro](https://aidijitalakademi.gumroad.com/l/lionstone-pro) · [Buy Lionstone Studio](https://aidijitalakademi.gumroad.com/l/lionstone-studio)**
+
+![Lionstone Pro 0.2.2: from raw recording to finished video](img/pro-workflow-022-1280x720.png)
+
+**Step-by-step guides with real screenshots:** [your first video (free)](guides/free.md) · [finishing with Pro](guides/pro.md) · [teams with Studio](guides/studio.md)
+
+## New in 0.2.1 – 0.2.3
+
+| Version | What changed |
+|---|---|
+| **0.2.3** | Brand kits accept the documented `{"preset": …}` form for transitions and lower thirds; on short videos the brand CTA no longer pushes out the end card. |
+| **0.2.2** | Keys renew themselves near the end of each period (`lionstone pro renew` checks now; `LIONSTONE_NO_RENEW=1` turns it off). |
+| **0.2.1** | Studio: everyone on a shared key works under their own email (`lionstone pro whoami you@team.com`), so roles tell members apart. Windows: no more errors when output is redirected. |
+
+![Your key renews itself](img/auto-renew-022-1280x720.png)
 
 ## What you get
 
@@ -51,10 +65,11 @@ Features that aren't finished yet (two-clip cross dissolves, particles, subject 
 
 ### Studio: team tools
 
-![Studio for teams](img/studio-features-1280x720.png)
+![Lionstone Studio: one key for 5 people, everyone keeps their own role](img/studio-roles-022-1280x720.png)
 
 | Command | What it does |
 |---|---|
+| `lionstone pro whoami ed@acme.com` | Each person on the shared Studio key works under their own email; roles follow it. |
 | `lionstone team init "ACME"` · `lionstone team member ed@acme.com editor` | Roles: viewer, editor, admin, owner — in a shared folder or git repo. Nothing is uploaded. |
 | `lionstone preset save "ACME Warm" --from look-warm-cinema --team --locked` | Versioned team presets with history and revert; locked company presets only admins can change. |
 | `lionstone brand create kit.json --team` · `lionstone brand apply plan.json ACME` | Brand kits: colors, licensed fonts, logo, lower third, CTA, end card, signature look and transition. |
