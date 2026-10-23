@@ -8,6 +8,7 @@ frame rate, color, titles, captions, then two-pass EBU R128 loudness.
 from __future__ import annotations
 
 import json
+import math
 import re
 import shlex
 from dataclasses import dataclass, field
@@ -74,15 +75,24 @@ def _even(x: float) -> int:
     return max(2, int(round(x / 2)) * 2)
 
 
-def _snap(plan: EditPlan, fps: float) -> list[tuple[float, float]]:
-    return [(a, b) for a, b, _ in _snap_src(plan, fps)]
+def _snap(plan: EditPlan, fps: float, audio_end: float | None = None) -> list[tuple[float, float]]:
+    return [(a, b) for a, b, _ in _snap_src(plan, fps, audio_end)]
 
 
-def _snap_src(plan: EditPlan, fps: float) -> list[tuple[float, float, str]]:
+def _audio_end(info: MediaInfo) -> float | None:
+    a = info.audio
+    return a.duration if a and a.duration else None
+
+
+def _snap_src(plan: EditPlan, fps: float,
+              audio_end: float | None = None) -> list[tuple[float, float, str]]:
+    """Segments on the frame grid. With `audio_end`, nothing runs past the source audio:
+    video that outlasts it (encoder flush, phone recordings) would have no sound to match."""
+    limit = math.floor(audio_end * fps + 1e-6) / fps if audio_end else math.inf
     out = []
     for s in plan.segments:
         a = round(s.start * fps) / fps
-        b = round(s.end * fps) / fps
+        b = min(round(s.end * fps) / fps, limit)
         if b - a >= 1 / fps:
             out.append((a, b, s.source))
     return out
@@ -129,7 +139,7 @@ def build_graph(plan: EditPlan, info: MediaInfo, opts: RenderOptions, workdir: P
     reg = registry()
     W, H, fps = output_geometry(info, opts.aspect)
     has_video = info.video is not None
-    segs_src = _snap_src(plan, fps)
+    segs_src = _snap_src(plan, fps, _audio_end(info))
     segs = [(a, b) for a, b, _ in segs_src]
     if not segs:
         raise ValueError("edit plan keeps nothing — check cuts or restore some")
@@ -355,7 +365,8 @@ def render(plan: EditPlan, output: str | Path, opts: RenderOptions | None = None
                                   " ".join(shlex.quote(c) for c in cmd) + "\n", encoding="utf-8")
     run(cmd, cwd=wd)
     result = RenderResult(output=out, width=W, height=H, fps=fps,
-                          duration=sum(b - a for a, b in _snap(plan, fps)), captions=captions,
+                          duration=sum(b - a for a, b in _snap(plan, fps, _audio_end(info))),
+                          captions=captions,
                           loudness_target={"profile": prof.name, "I": prof.integrated,
                                            "TP": prof.true_peak, "measured_input": measured},
                           graphics_log=meta["graphics_log"], notes=meta["notes"],

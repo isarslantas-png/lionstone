@@ -55,6 +55,24 @@ def test_edit_signal_only(clip: Path, tmp_path: Path):
     assert checks["word_integrity"] == "skipped"  # honest: no transcript, not "passed"
 
 
+def test_video_longer_than_audio_keeps_av_in_sync(tmp_path: Path):
+    """Video that outlasts the audio (encoder flush, phone recordings) must not make the
+    output's video and audio lengths drift apart (QA av_length)."""
+    src = tmp_path / "long_video.mp4"
+    _ff("-f", "lavfi", "-i", "testsrc2=s=320x180:r=25:d=6", "-f", "lavfi",
+        "-i", "sine=f=220:d=4.4:r=48000,volume=0.4,tremolo=f=5:d=0.6",
+        "-c:v", "libx264", "-preset", "ultrafast", "-pix_fmt", "yuv420p", "-c:a", "aac", str(src))
+    out = tmp_path / "out"
+    assert main(["edit", str(src), "-o", str(out), "--no-asr", "--fast"]) == 0
+    plan = json.loads((out / "plan.json").read_text())
+    assert plan["segments"][-1]["end"] > 5.5  # the plan itself still reaches the video end
+    qa = json.loads((out / "qa.json").read_text())
+    checks = {c["name"]: c for c in qa["checks"]}
+    assert checks["av_length"]["status"] == "passed", checks["av_length"]["detail"]
+    assert checks["plan_duration"]["status"] == "passed"
+    assert qa["deliverable"]
+
+
 def test_cuts_restore_roundtrip(clip: Path, tmp_path: Path):
     out = tmp_path / "o2"
     assert main(["plan", str(clip), "-o", str(out), "--no-asr"]) == 0
