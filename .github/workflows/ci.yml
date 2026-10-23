@@ -13,6 +13,8 @@ jobs:
         os: [ubuntu-latest, macos-latest, windows-latest]
         python: ["3.10", "3.12", "3.13"]
     runs-on: ${{ matrix.os }}
+    # a stuck package mirror can otherwise hold a runner for the 6 h default
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-python@v5
@@ -20,9 +22,11 @@ jobs:
           python-version: ${{ matrix.python }}
       - name: Install FFmpeg
         shell: bash
+        timeout-minutes: 20
         run: |
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
           case "$RUNNER_OS" in
-            Linux) sudo apt-get update && sudo apt-get install -y ffmpeg fonts-dejavu-core ;;
+            Linux) sudo apt-get $APT update && sudo apt-get $APT install -y ffmpeg fonts-dejavu-core ;;
             macOS) brew install ffmpeg ;;
             Windows) choco install ffmpeg -y --no-progress ;;
           esac
@@ -32,6 +36,7 @@ jobs:
 
   remotion:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     defaults:
       run:
         working-directory: remotion
