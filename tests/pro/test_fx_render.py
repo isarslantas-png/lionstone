@@ -81,6 +81,8 @@ def test_final_render_with_many_features(media, plan_copy, tmp_path):
     qa = json.loads((tmp_path / "qa.json").read_text())
     names = {c["name"]: c["status"] for c in qa["checks"]}
     assert names["fx_compiled"] == "passed" and names["flicker"] == "passed"
+    # the clip's audio ends before its video; the render must still keep A/V in sync
+    assert names["av_length"] == "passed"
     rep = EditPlan.load(plan_copy).meta["lionstone_fx"]["compiled"]["report"]
     assert len(rep["applied"]) == 7 and not rep["skipped"]
     del main
