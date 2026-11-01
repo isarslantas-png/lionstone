@@ -52,7 +52,7 @@ lionstone doctor
 ```
 
 ```text
-🦁 Lionstone — AI editing agent · v0.3.0
+🦁 Lionstone — AI editing agent · v0.3.1
   ✅ ffmpeg             ffmpeg version 9.0.2-full_build …
   ✅   filter drawtext  available
   ✅   filter subtitles available

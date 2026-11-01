@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lionstone"
-version = "0.3.0"
+version = "0.3.1"
 description = "Open-source AI editing agent that turns raw podcasts, interviews and talks into publish-ready video — with an edit plan you can read, undo and verify."
 readme = "README.md"
 license = "Apache-2.0"
