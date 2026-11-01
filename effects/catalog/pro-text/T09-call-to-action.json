@@ -1,0 +1,36 @@
+{
+  "id": "T09",
+  "name": "Call to Action",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "social",
+    "corporate"
+  ],
+  "description": "Call to Action — Lionstone Pro typography.",
+  "use": [
+    "keypoint"
+  ],
+  "duration": {
+    "enter": 0.4,
+    "hold": 3.0,
+    "exit": 0.4
+  },
+  "parameters": {},
+  "constraints": {
+    "minDuration": 1.2,
+    "maxDuration": 20,
+    "safeArea": true,
+    "minFontPx": 20
+  },
+  "renderEngine": "ffmpeg",
+  "fallbackEngine": "ffmpeg",
+  "composition": "",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "no bundled assets"
+  }
+}

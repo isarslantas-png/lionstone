@@ -1,0 +1,36 @@
+{
+  "id": "T10",
+  "name": "Speaker Label",
+  "category": "lower_third",
+  "tier": "pro",
+  "style": [
+    "editorial",
+    "minimal"
+  ],
+  "description": "Speaker Label — Lionstone Pro typography.",
+  "use": [
+    "keypoint"
+  ],
+  "duration": {
+    "enter": 0.3,
+    "hold": 3.0,
+    "exit": 0.3
+  },
+  "parameters": {},
+  "constraints": {
+    "minDuration": 1.2,
+    "maxDuration": 20,
+    "safeArea": true,
+    "minFontPx": 20
+  },
+  "renderEngine": "ffmpeg",
+  "fallbackEngine": "ffmpeg",
+  "composition": "",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "no bundled assets"
+  }
+}

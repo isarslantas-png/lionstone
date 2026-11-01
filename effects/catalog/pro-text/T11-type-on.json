@@ -1,0 +1,36 @@
+{
+  "id": "T11",
+  "name": "Type-On",
+  "category": "title",
+  "tier": "pro",
+  "style": [
+    "minimal",
+    "social"
+  ],
+  "description": "Type-On — Lionstone Pro typography.",
+  "use": [
+    "keypoint"
+  ],
+  "duration": {
+    "enter": 0.2,
+    "hold": 3.0,
+    "exit": 0.4
+  },
+  "parameters": {},
+  "constraints": {
+    "minDuration": 1.2,
+    "maxDuration": 20,
+    "safeArea": true,
+    "minFontPx": 20
+  },
+  "renderEngine": "ffmpeg",
+  "fallbackEngine": "ffmpeg",
+  "composition": "",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "no bundled assets"
+  }
+}

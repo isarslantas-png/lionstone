@@ -38,5 +38,6 @@
   "license": {
     "code": "Lionstone Pro EULA",
     "assets": "bundled fonts: OFL only"
-  }
+  },
+  "remotionProject": "../../../remotion"
 }

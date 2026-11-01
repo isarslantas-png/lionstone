@@ -1,0 +1,1392 @@
+[
+ {
+  "id": "lionstone.look-natural-neutral",
+  "name": "Natural Neutral",
+  "kind": "look",
+  "category": "natural",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Natural Neutral look (natural). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "natural"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-clean-daylight",
+  "name": "Clean Daylight",
+  "kind": "look",
+  "category": "natural",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Clean Daylight look (natural). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "natural"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-warm-cinema",
+  "name": "Warm Cinema",
+  "kind": "look",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Warm Cinema look (cinematic). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "cinematic"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-cool-cinema",
+  "name": "Cool Cinema",
+  "kind": "look",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Cool Cinema look (cinematic). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "cinematic"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-muted-film",
+  "name": "Muted Film",
+  "kind": "look",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Muted Film look (cinematic). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "cinematic"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-soft-contrast",
+  "name": "Soft Contrast",
+  "kind": "look",
+  "category": "editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Soft Contrast look (editorial). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "editorial"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-matte-editorial",
+  "name": "Matte Editorial",
+  "kind": "look",
+  "category": "editorial",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Matte Editorial look (editorial). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "editorial"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-true-to-life",
+  "name": "True-to-Life",
+  "kind": "look",
+  "category": "documentary",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "True-to-Life look (documentary). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "documentary"
+  ],
+  "styles": [
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-low-saturation",
+  "name": "Low Saturation",
+  "kind": "look",
+  "category": "documentary",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Low Saturation look (documentary). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "documentary"
+  ],
+  "styles": [
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-golden-hour",
+  "name": "Golden Hour",
+  "kind": "look",
+  "category": "warm-cool",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Golden Hour look (warm-cool). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "warm-cool"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-warm-interior",
+  "name": "Warm Interior",
+  "kind": "look",
+  "category": "warm-cool",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Warm Interior look (warm-cool). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "warm-cool"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-steel-blue",
+  "name": "Steel Blue",
+  "kind": "look",
+  "category": "warm-cool",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Steel Blue look (warm-cool). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "warm-cool"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-cool-shadow",
+  "name": "Cool Shadow",
+  "kind": "look",
+  "category": "warm-cool",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Cool Shadow look (warm-cool). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "warm-cool"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-analog-soft",
+  "name": "Analog Soft",
+  "kind": "look",
+  "category": "retro",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Analog Soft look (retro). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "retro"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-vintage-fade",
+  "name": "Vintage Fade",
+  "kind": "look",
+  "category": "retro",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Vintage Fade look (retro). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "retro"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-night-detail",
+  "name": "Night Detail",
+  "kind": "look",
+  "category": "night",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Night Detail look (night). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "night"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-neon-balance",
+  "name": "Neon Balance",
+  "kind": "look",
+  "category": "night",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Neon Balance look (night). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "night"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-classic-bw",
+  "name": "Classic B&W",
+  "kind": "look",
+  "category": "monochrome",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 1.0
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Classic B&W look (monochrome). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "monochrome"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-high-contrast-mono",
+  "name": "High-Contrast Mono",
+  "kind": "look",
+  "category": "monochrome",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 1.0
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "High-Contrast Mono look (monochrome). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "monochrome"
+  ],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-product-neutral",
+  "name": "Product Neutral",
+  "kind": "look",
+  "category": "product",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Product Neutral look (product). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "product"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-detail-pop",
+  "name": "Detail Pop",
+  "kind": "look",
+  "category": "product",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Detail Pop look (product). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "product"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-bright-interior",
+  "name": "Bright Interior",
+  "kind": "look",
+  "category": "real-estate",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Bright Interior look (real-estate). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "real-estate"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-window-balance",
+  "name": "Window Balance",
+  "kind": "look",
+  "category": "real-estate",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Window Balance look (real-estate). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "real-estate"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-natural-exterior",
+  "name": "Natural Exterior",
+  "kind": "look",
+  "category": "real-estate",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Natural Exterior look (real-estate). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "real-estate"
+  ],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-punchy-social",
+  "name": "Punchy Social",
+  "kind": "look",
+  "category": "social",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Punchy Social look (social). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "social"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.look-soft-skin-safe",
+  "name": "Soft Skin-Safe",
+  "kind": "look",
+  "category": "social",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Soft Skin-Safe look (social). Intensity scales every adjustment; saturation is capped to protect skin tones.",
+  "tags": [
+   "social"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.color-controls",
+  "name": "Colour Controls",
+  "kind": "look",
+  "category": "manual",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "exposure": {
+    "type": "number",
+    "min": -2,
+    "max": 2,
+    "default": 0,
+    "unit": "EV"
+   },
+   "brightness": {
+    "type": "number",
+    "min": -0.3,
+    "max": 0.3,
+    "default": 0
+   },
+   "contrast": {
+    "type": "number",
+    "min": 0.5,
+    "max": 1.5,
+    "default": 1
+   },
+   "highlights": {
+    "type": "number",
+    "min": -1,
+    "max": 1,
+    "default": 0
+   },
+   "shadows": {
+    "type": "number",
+    "min": -1,
+    "max": 1,
+    "default": 0
+   },
+   "whites": {
+    "type": "number",
+    "min": -0.2,
+    "max": 0.0,
+    "default": 0
+   },
+   "blacks": {
+    "type": "number",
+    "min": 0.0,
+    "max": 0.2,
+    "default": 0
+   },
+   "temperature": {
+    "type": "number",
+    "min": 2500,
+    "max": 12000,
+    "default": 6500,
+    "unit": "K"
+   },
+   "tint": {
+    "type": "number",
+    "min": -0.3,
+    "max": 0.3,
+    "default": 0
+   },
+   "saturation": {
+    "type": "number",
+    "min": 0,
+    "max": 2,
+    "default": 1
+   },
+   "vibrance": {
+    "type": "number",
+    "min": -1,
+    "max": 1,
+    "default": 0
+   },
+   "vignette": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0
+   },
+   "grain": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0
+   },
+   "sharpen": {
+    "type": "number",
+    "min": 0,
+    "max": 1.5,
+    "default": 0
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Manual grade: exposure, contrast, curves, temperature/tint, saturation, vibrance, vignette, grain, sharpening.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.lut",
+  "name": "Custom LUT (.cube)",
+  "kind": "look",
+  "category": "manual",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "file": {
+    "type": "string",
+    "default": "",
+    "maxLength": 1000
+   },
+   "license_source": {
+    "type": "string",
+    "default": "",
+    "maxLength": 300
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Apply your own 3D LUT. The LUT's source/licence must be recorded.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "No LUTs are bundled. Missing file → clear error, instance skipped."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.shot-match",
+  "name": "Shot Matching",
+  "kind": "look",
+  "category": "manual",
+  "tier": "studio",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Per-camera colour matching is planned (Studio)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.log-conversion",
+  "name": "Log / HDR Conversion",
+  "kind": "look",
+  "category": "manual",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "No camera log or HDR transforms are implemented; Lionstone warns instead of guessing a conversion."
+  ],
+  "pipeline": "filter"
+ }
+]

@@ -1,0 +1,590 @@
+[
+ {
+  "id": "lionstone.gentle-push-in",
+  "name": "Gentle Push-In",
+  "kind": "motion",
+  "category": "camera",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Slow eased push-in; centre-anchored so a speaker's face stays in frame.",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "documentary",
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.slow-pull-back",
+  "name": "Slow Pull-Back",
+  "kind": "motion",
+  "category": "camera",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Starts slightly tight and eases back to the full frame.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.ken-burns-pan",
+  "name": "Ken Burns Pan",
+  "kind": "motion",
+  "category": "camera",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "direction": {
+    "type": "enum",
+    "values": [
+     "left",
+     "right"
+    ],
+    "default": "right"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Horizontal drift with a light zoom — for photos and architecture.",
+  "tags": [],
+  "styles": [
+   "documentary",
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.vertical-drift",
+  "name": "Vertical Drift",
+  "kind": "motion",
+  "category": "camera",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "direction": {
+    "type": "enum",
+    "values": [
+     "up",
+     "down"
+    ],
+    "default": "up"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Slow tilt-like drift; good for tall interiors and facades.",
+  "tags": [],
+  "styles": [
+   "documentary",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.product-hero-reveal",
+  "name": "Product Hero Reveal",
+  "kind": "motion",
+  "category": "product",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Ease-out push-in with a soft vignette to focus the product.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.keyframe-transform",
+  "name": "Keyframe Transform",
+  "kind": "motion",
+  "category": "keyframes",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "zoom": {
+    "type": "keyframes",
+    "default": [
+     {
+      "t": 0,
+      "v": 1,
+      "ease": "linear"
+     }
+    ]
+   },
+   "panx": {
+    "type": "keyframes",
+    "default": [
+     {
+      "t": 0,
+      "v": 0,
+      "ease": "linear"
+     }
+    ]
+   },
+   "pany": {
+    "type": "keyframes",
+    "default": [
+     {
+      "t": 0,
+      "v": 0,
+      "ease": "linear"
+     }
+    ]
+   },
+   "rotation": {
+    "type": "keyframes",
+    "default": [
+     {
+      "t": 0,
+      "v": 0,
+      "ease": "linear"
+     }
+    ]
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Your own keyframes for scale, position X/Y and rotation with linear, ease-in/out, cubic-bezier or spring easing.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Scale < 1 is clamped to 1 (no letterboxing).",
+   "Rotation shows black corners unless combined with zoom ≥ 1.1."
+  ],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.parallax-lite",
+  "name": "Parallax Lite",
+  "kind": "motion",
+  "category": "camera",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs real layer/depth data."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.floating-overlay",
+  "name": "Floating Overlay",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Overlay layers arrive with the Studio graphics layer system."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.logo-draw-on",
+  "name": "Logo Draw-On",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs SVG path rendering."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.pip-enter-exit",
+  "name": "Picture-in-Picture Enter/Exit",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.map-pin-reveal",
+  "name": "Map / Location Pin Reveal",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs map imagery with a verified licence."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.circle-emphasis",
+  "name": "Circle Emphasis",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.arrow-trace",
+  "name": "Arrow Trace",
+  "kind": "motion",
+  "category": "overlay",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ }
+]

@@ -1,0 +1,1480 @@
+[
+ {
+  "id": "lionstone.soft-bloom",
+  "name": "Soft Bloom",
+  "kind": "effect",
+  "category": "light-glow",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.35
+   },
+   "radius": {
+    "type": "number",
+    "min": 1,
+    "max": 100,
+    "default": 18,
+    "unit": "px@1080p"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Gentle glow around highlights via a blurred screen layer.",
+  "tags": [
+   "glow",
+   "dreamy"
+  ],
+  "styles": [
+   "cinematic",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": "lionstone.soft-vignette",
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.lens-glow",
+  "name": "Lens Glow",
+  "kind": "effect",
+  "category": "light-glow",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Radial glow from a light source.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.light-leak",
+  "name": "Light Leak",
+  "kind": "effect",
+  "category": "light-glow",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "motion": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "color": {
+    "type": "color",
+    "default": "#FF9A3C"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Warm, drifting procedural light washes (no stock overlays).",
+  "tags": [
+   "warm",
+   "film"
+  ],
+  "styles": [
+   "cinematic",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": "lionstone.soft-bloom",
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.edge-glow",
+  "name": "Edge Glow",
+  "kind": "effect",
+  "category": "light-glow",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.directional-blur",
+  "name": "Directional Blur",
+  "kind": "effect",
+  "category": "blur-focus",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "angle": {
+    "type": "number",
+    "min": 0,
+    "max": 360,
+    "default": 0,
+    "unit": "deg"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Motion-style blur along an angle.",
+  "tags": [],
+  "styles": [
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.radial-blur",
+  "name": "Radial Blur",
+  "kind": "effect",
+  "category": "blur-focus",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.focus-pull",
+  "name": "Focus Pull",
+  "kind": "effect",
+  "category": "blur-focus",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   },
+   "direction": {
+    "type": "enum",
+    "values": [
+     "in",
+     "out"
+    ],
+    "default": "in"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Rack focus from soft to sharp (in) or sharp to soft (out).",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Stepped in 5 stages (gblur has no per-frame sigma)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.smooth-zoom",
+  "name": "Smooth Zoom",
+  "kind": "effect",
+  "category": "motion",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Slow eased zoom across the window. Keeps faces in frame (centre crop).",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.motion-blur",
+  "name": "Motion Blur",
+  "kind": "effect",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Frame-blend motion trail.",
+  "tags": [],
+  "styles": [
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.speed-accent",
+  "name": "Speed Accent",
+  "kind": "effect",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Changes timing and audio sync; belongs to the core edit plan. Planned."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.freeze-frame",
+  "name": "Freeze Frame",
+  "kind": "effect",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Changes timing; planned as an edit-plan operation."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.subtle-glitch",
+  "name": "Subtle Glitch",
+  "kind": "effect",
+  "category": "distortion",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Sparse RGB-split bursts with noise. Capped at 3 bursts/second.",
+  "tags": [
+   "glitch"
+  ],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Photosensitivity guard: bursts never closer than 0.35 s."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.chromatic-shift",
+  "name": "Chromatic Shift",
+  "kind": "effect",
+  "category": "distortion",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Constant red/blue channel offset.",
+  "tags": [],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.ripple",
+  "name": "Ripple",
+  "kind": "effect",
+  "category": "distortion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.film-grain",
+  "name": "Film Grain",
+  "kind": "effect",
+  "category": "texture",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 2,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.35
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Temporal grain. v2 renamed `amount` → `intensity` (migrated automatically).",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.dust-texture",
+  "name": "Dust Texture",
+  "kind": "effect",
+  "category": "texture",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs a licensed dust overlay asset; none is bundled."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.halation",
+  "name": "Halation",
+  "kind": "effect",
+  "category": "texture",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Red glow bleeding around bright edges, like film halation.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.vhs-texture",
+  "name": "VHS Texture",
+  "kind": "effect",
+  "category": "texture",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Chroma bleed, softness, noise and lowered saturation.",
+  "tags": [],
+  "styles": [
+   "social",
+   "retro"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.soft-vignette",
+  "name": "Soft Vignette",
+  "kind": "effect",
+  "category": "cinematic",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Subtle edge darkening that keeps the centre (faces) untouched.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "minimal",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.film-burn",
+  "name": "Film Burn",
+  "kind": "effect",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Procedural orange burn swelling in and out of the window.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.letterbox",
+  "name": "Letterbox Overlay",
+  "kind": "effect",
+  "category": "cinematic",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "ratio": {
+    "type": "number",
+    "min": 1.85,
+    "max": 2.76,
+    "default": 2.39
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Black bars for a wide-screen look (16:9 sources).",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.beat-flash",
+  "name": "Beat Flash",
+  "kind": "effect",
+  "category": "social",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   },
+   "every": {
+    "type": "number",
+    "min": 0.34,
+    "max": 4,
+    "default": 0.5,
+    "unit": "s"
+   },
+   "times": {
+    "type": "list",
+    "items": {
+     "type": "number",
+     "min": 0,
+     "max": 36000
+    },
+    "default": []
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Short brightness hits on beats (explicit times or every N s).",
+  "tags": [
+   "music"
+  ],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Never more than 3 flashes/second (photosensitivity guard)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.quick-punch-in",
+  "name": "Quick Punch-In",
+  "kind": "effect",
+  "category": "social",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "amount": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Fast eased zoom-in held for the window — emphasis on a key line.",
+  "tags": [],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "transform"
+ },
+ {
+  "id": "lionstone.split-screen",
+  "name": "Split Screen",
+  "kind": "effect",
+  "category": "social",
+  "tier": "studio",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.shape-reveal",
+  "name": "Shape Reveal",
+  "kind": "effect",
+  "category": "mask-reveal",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.luma-reveal",
+  "name": "Luma Reveal",
+  "kind": "effect",
+  "category": "mask-reveal",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.subject-reveal",
+  "name": "Subject Reveal",
+  "kind": "effect",
+  "category": "mask-reveal",
+  "tier": "studio",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs subject segmentation; no such model is integrated."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.haze",
+  "name": "Haze",
+  "kind": "effect",
+  "category": "atmosphere",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Soft atmospheric lift: lower contrast, diffused highlights.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.mist",
+  "name": "Mist",
+  "kind": "effect",
+  "category": "atmosphere",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.light-rays",
+  "name": "Light Rays",
+  "kind": "effect",
+  "category": "atmosphere",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.subtle-particles",
+  "name": "Subtle Particles",
+  "kind": "effect",
+  "category": "atmosphere",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.exposure-balance",
+  "name": "Exposure Balance",
+  "kind": "effect",
+  "category": "utility",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "stops": {
+    "type": "number",
+    "min": -1.0,
+    "max": 1.0,
+    "default": 0.3,
+    "unit": "EV"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Gentle exposure correction (gamma, highlight-safe).",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.noise-reduction",
+  "name": "Noise Reduction",
+  "kind": "effect",
+  "category": "utility",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "strength": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Temporal + spatial denoise (hqdn3d).",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.stabilization",
+  "name": "Stabilization",
+  "kind": "effect",
+  "category": "utility",
+  "tier": "pro",
+  "implementationStatus": "partial",
+  "version": 1,
+  "parameters": {
+   "strength": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "high",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Single-pass stabilization (FFmpeg deshake).",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Applies to the whole video (deshake has no time windows).",
+   "Single pass; a two-pass vid.stab adapter is planned."
+  ],
+  "pipeline": "filter"
+ }
+]

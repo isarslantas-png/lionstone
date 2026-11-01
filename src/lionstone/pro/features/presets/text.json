@@ -1,0 +1,1527 @@
+[
+ {
+  "id": "lionstone.editorial-fade",
+  "name": "Editorial Fade",
+  "kind": "text",
+  "category": "clean-editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Soft fade with background dim.",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "F01"
+ },
+ {
+  "id": "lionstone.minimal-rise",
+  "name": "Minimal Rise",
+  "kind": "text",
+  "category": "clean-editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Title rises gently and settles.",
+  "tags": [],
+  "styles": [
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "F02"
+ },
+ {
+  "id": "lionstone.tracking-reveal",
+  "name": "Tracking Reveal",
+  "kind": "text",
+  "category": "clean-editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Letter spacing eases from wide to normal.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Full tracking animation renders with Remotion; FFmpeg fallback fades."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "F06"
+ },
+ {
+  "id": "lionstone.line-reveal",
+  "name": "Line Reveal",
+  "kind": "text",
+  "category": "clean-editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Rule opens under the title.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "F03"
+ },
+ {
+  "id": "lionstone.chapter-card",
+  "name": "Chapter Card",
+  "kind": "text",
+  "category": "clean-editorial",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Full-frame chapter card.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "F04"
+ },
+ {
+  "id": "lionstone.mask-reveal",
+  "name": "Mask Reveal",
+  "kind": "text",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Footage shows through the letters, then opens.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs Remotion; otherwise falls back to Editorial Fade."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "P02"
+ },
+ {
+  "id": "lionstone.soft-light-sweep",
+  "name": "Soft Light Sweep",
+  "kind": "text",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Sheen sweeps across the title.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs Remotion; otherwise falls back to Editorial Fade."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "P01"
+ },
+ {
+  "id": "lionstone.depth-title",
+  "name": "Depth Title",
+  "kind": "text",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Parallax depth title.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "P03"
+ },
+ {
+  "id": "lionstone.film-title",
+  "name": "Film Title",
+  "kind": "text",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Grain + vignette title.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "P04"
+ },
+ {
+  "id": "lionstone.word-pop",
+  "name": "Word Pop",
+  "kind": "text",
+  "category": "kinetic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "One word at a time, each popping in with a controlled spring.",
+  "tags": [],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T01"
+ },
+ {
+  "id": "lionstone.staggered-words",
+  "name": "Staggered Words",
+  "kind": "text",
+  "category": "kinetic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Words land in sequence; last line in accent.",
+  "tags": [],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "P05"
+ },
+ {
+  "id": "lionstone.phrase-build",
+  "name": "Phrase Build",
+  "kind": "text",
+  "category": "kinetic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Lines build up one after another.",
+  "tags": [],
+  "styles": [
+   "social",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T02"
+ },
+ {
+  "id": "lionstone.type-on",
+  "name": "Type-On",
+  "kind": "text",
+  "category": "kinetic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Characters type on with a cursor.",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Up to 80 characters."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "T11"
+ },
+ {
+  "id": "lionstone.speaker-label",
+  "name": "Speaker Label",
+  "kind": "text",
+  "category": "captions",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Small label naming the current speaker.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T10"
+ },
+ {
+  "id": "lionstone.pin-label",
+  "name": "Pin Label",
+  "kind": "text",
+  "category": "callouts",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   },
+   "x": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   },
+   "y": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Dot + label at a point of interest.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T03"
+ },
+ {
+  "id": "lionstone.arrow-callout",
+  "name": "Arrow Callout",
+  "kind": "text",
+  "category": "callouts",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Arrow pointing at a detail.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "T00"
+ },
+ {
+  "id": "lionstone.circle-highlight",
+  "name": "Circle Highlight",
+  "kind": "text",
+  "category": "callouts",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Circle drawn around a detail.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "T00"
+ },
+ {
+  "id": "lionstone.logo-reveal",
+  "name": "Logo Reveal",
+  "kind": "text",
+  "category": "brand",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Signature brand open/close.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "P06"
+ },
+ {
+  "id": "lionstone.brand-lockup",
+  "name": "Brand Lockup",
+  "kind": "text",
+  "category": "brand",
+  "tier": "studio",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Brand name + tagline lockup with lines; uses the Studio brand kit.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T12"
+ },
+ {
+  "id": "lionstone.end-card",
+  "name": "Signature End Card",
+  "kind": "text",
+  "category": "brand",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Title, subtitle and CTA assembling into an end card.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T12"
+ },
+ {
+  "id": "lionstone.counter-up",
+  "name": "Counter Up",
+  "kind": "text",
+  "category": "numeric",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   },
+   "from": {
+    "type": "number",
+    "min": -1000000000.0,
+    "max": 1000000000.0,
+    "default": 0
+   },
+   "to": {
+    "type": "number",
+    "min": -1000000000.0,
+    "max": 1000000000.0,
+    "default": 100
+   },
+   "prefix": {
+    "type": "string",
+    "default": "",
+    "maxLength": 12
+   },
+   "suffix": {
+    "type": "string",
+    "default": "",
+    "maxLength": 12
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Number counts up to a value.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T04"
+ },
+ {
+  "id": "lionstone.price-reveal",
+  "name": "Price Reveal",
+  "kind": "text",
+  "category": "numeric",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   },
+   "old": {
+    "type": "string",
+    "default": "",
+    "maxLength": 30
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Price pops in on an accent panel (optional old price).",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T05"
+ },
+ {
+  "id": "lionstone.stat-emphasis",
+  "name": "Stat Emphasis",
+  "kind": "text",
+  "category": "numeric",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Big figure + label.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T06"
+ },
+ {
+  "id": "lionstone.name-role",
+  "name": "Name & Role",
+  "kind": "text",
+  "category": "lower-thirds",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Name + role lower third.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "F05"
+ },
+ {
+  "id": "lionstone.location-label",
+  "name": "Location Label",
+  "kind": "text",
+  "category": "lower-thirds",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Pin glyph + place name lower third.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T07"
+ },
+ {
+  "id": "lionstone.info-bar",
+  "name": "Minimal Info Bar",
+  "kind": "text",
+  "category": "lower-thirds",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Full-width info bar.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T08"
+ },
+ {
+  "id": "lionstone.cta",
+  "name": "Call to Action",
+  "kind": "text",
+  "category": "cta",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Button-style CTA with gentle pulse.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "graphic",
+  "graphicEffect": "T09"
+ },
+ {
+  "id": "lionstone.blur-to-sharp",
+  "name": "Blur-to-Sharp",
+  "kind": "text",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "text": {
+    "type": "string",
+    "default": "Lionstone",
+    "maxLength": 140
+   },
+   "subtext": {
+    "type": "string",
+    "default": "",
+    "maxLength": 140
+   },
+   "duration": {
+    "type": "number",
+    "min": 1.0,
+    "max": 20.0,
+    "default": 4.0,
+    "unit": "s"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Title focuses in.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "drawtext can't blur text; needs Remotion component."
+  ],
+  "pipeline": "graphic",
+  "graphicEffect": "T00"
+ }
+]

@@ -1,39 +1,30 @@
-# Finishing a video with Lionstone Pro
+# Finishing a video: the creative features
 
-Lionstone Pro takes the edit from the [free guide](free.md) and finishes it: a consistent look,
+Lionstone's creative features take the edit from the [free guide](free.md) and finishes it: a consistent look,
 transitions, animated text, an agent that proposes all of it and explains why, then Shorts & Reels
 and project files for your editing software. Everything below is a real run on the same sample
-episode with Lionstone Pro 0.2.
-
-![Lionstone Pro 0.2.2](../img/pro-workflow-022-1280x720.png)
+episode. They are free and open source, like the rest of Lionstone.
 
 ![Lionstone Pro: finish, decide, deliver](img/pro-steps.png)
 
 ---
 
-## Step 1 — Install and activate
+## Step 1 — Install
 
-After buying Lionstone Pro you get two things: the package `lionstone_pro-0.2.x-py3-none-any.whl`
-in your Gumroad library and a license key by email. With the free core installed
-([free guide, step 1](free.md#step-1--install)):
+Nothing to buy and nothing to activate. With the core installed
+([free guide, step 1](free.md#step-1--install)), add NumPy (and OpenCV for face-following crops):
 
 ```bash
-pip install lionstone_pro-0.2.x-py3-none-any.whl
-lionstone pro activate LSP1.…your-key…
+pip install "lionstone[extras] @ git+https://github.com/ismailarslantas/lionstone"
+# face-following reframe and vision QA:
+pip install "lionstone[vision] @ git+https://github.com/ismailarslantas/lionstone"
 ```
 
-```text
-✅ Lionstone Pro (monthly, 1 seat) activated for anna@studionotes.example (valid until 2026-11-29).
-```
-
-The key is checked offline. Your membership renews automatically and, from 0.2.2, so does the key:
-in its last days Lionstone fetches the next one by itself.
-
-![Your key renews itself](../img/auto-renew-022-1280x720.png)
+`lionstone doctor` shows what is available.
 
 ## Step 2 — Edit as usual
 
-Same command as the free version — Pro adds to it, it doesn't replace it:
+Same command as before; the creative features add to it, they don't replace it:
 
 ```bash
 lionstone edit ep12.mp4 --title "Studio Notes" --speaker "Anna Reed|Host" --captions burn --profile podcast
@@ -162,9 +153,8 @@ The project points at your original media, so you can keep refining in your edit
 | `lionstone style learn ref1.mp4 ref2.mp4 -o brand.json` | learns pace, pauses, loudness and color from reference videos |
 | `lionstone variants ep12.mp4` | natural, cinematic and dynamic edits side by side |
 | `lionstone preset save "My Warm" --from look-warm-cinema --param intensity=0.4` | your own preset on top of a built-in one |
-| `lionstone pro setup-remotion` | Remotion-quality title effects (needs Node.js 18+) |
+| `cd remotion && npm ci` | Remotion-quality title effects (needs Node.js 18+; run from a source checkout) |
 
 ---
 
-Working as a team? [Lionstone Studio](studio.md) adds brand kits, roles and shared presets.
-→ [Get Lionstone Pro](https://aidijitalakademi.gumroad.com/l/lionstone-pro)
+Working as a team? The [team guide](studio.md) covers brand kits, roles and shared presets.

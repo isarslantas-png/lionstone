@@ -4,11 +4,11 @@ Plugins are regular Python packages exposing an entry point in the
 ``lionstone.plugins`` group::
 
     [project.entry-points."lionstone.plugins"]
-    pro = "lionstone_pro.plugin:register"
+    myplugin = "my_package.plugin:register"
 
 ``register(registry)`` receives a :class:`Registry` and can add effect packs,
 CLI commands, exporters, plan/QA hooks, caption styles and reframers.
-Lionstone Pro is implemented this way — the open core has no paywalled code
+The creative features (formerly Pro) now ship built in: the open core has no paywalled code
 paths, only extension points.
 """
 
@@ -66,6 +66,13 @@ def registry(reload: bool = False) -> Registry:
     if _REGISTRY is not None and not reload:
         return _REGISTRY
     reg = Registry()
+    try:  # the creative features (former Pro/Studio) ship in the core
+        from .pro.plugin import register as _register_builtin
+        _register_builtin(reg)
+        reg.loaded.append({"name": "builtin", "module": "lionstone.pro", "status": "ok"})
+    except Exception as e:  # e.g. numpy missing: the core must keep working
+        log.warning("built-in creative features unavailable: %s", e)
+        reg.loaded.append({"name": "builtin", "module": "lionstone.pro", "status": f"failed: {e}"})
     try:
         eps = entry_points(group="lionstone.plugins")
     except TypeError:  # pragma: no cover - py<3.10

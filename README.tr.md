@@ -36,23 +36,16 @@ lionstone edit podcast.mp4 --language tr --title "12. Bölüm" --speaker "Ayşe 
 
 Çıktılar `podcast_lionstone/` klasöründe: düzenlenmiş video, SRT/VTT altyazı, `plan.json`, `transcript.md` ve `qa.md` kalite raporu.
 
-## 💎 Free · Pro · Studio
+## 💎 Her şey ücretsiz
 
-Ücretsiz sürüm eksiksiz bir editördür, deneme sürümü değildir.
+Lionstone eksiksiz bir editördür ve **tüm özellikler ücretsiz ve açık kaynaktır (Apache-2.0)**: lisans anahtarı, hesap, filigran, yükleme ve telemetri yok. Eski Pro ve Studio özellikleri artık çekirdeğin parçası:
 
-| | **Free** | **Pro** | **Studio** |
-|---|:-:|:-:|:-:|
-| Konuşma odaklı kesim, metinle kurgu, geri alma | ✅ | ✅ | ✅ |
-| Ses, renk, altyazı, 6 başlık efekti, QA, MCP | ✅ | ✅ | ✅ |
-| **Çoklu kamera**: drift kontrollü senkron, konuşana göre kamera seçimi | | ✅ | ✅ |
-| **Stil öğrenme**: 1–3 referans videodan tempo, renk, ses | | ✅ | ✅ |
-| **Reels/Shorts üretici**: en iyi anlar → 9:16, yüz takibi, hook başlık, kelime vurgulu altyazı | | ✅ | ✅ |
-| **6 Pro başlık efekti** | | ✅ | ✅ |
-| **Proje dışa aktarma**: FCPXML (Resolve/Final Cut) + EDL (Premiere) | | ✅ | ✅ |
-| **Görsel QA**: grafik/altyazı yüzü kapatıyor mu? | | ✅ | ✅ |
-| Koltuk sayısı · toplu işleme · öncelikli destek | | 1 | 5+ |
+- **Creative Suite**: 133 look, efekt, geçiş, hareket ve metin hazır ayarı (`lionstone fx list`, `fx preview`, `fx auto`)
+- **Çoklu kamera** (`multicam`), **stil öğrenme** (`style learn`), **Reels/Shorts üretici** (`clips`), **FCPXML + EDL** (`export`)
+- **Takım araçları**: marka kitleri, roller, sürümlü ve kilitli hazır ayarlar, toplu uygulama (`team`, `brand`, `preset`, `fx batch`)
+- **Lionstone Styles**: `O4 W3 A3 G5 S4 P3` gibi stil kodları (`lionstone styles --open`, `--cmd O4 W3 A3`)
 
-Pro sizin bilgisayarınızda, çevrimdışı lisans anahtarıyla çalışır — hesap yok, yükleme yok, telemetri yok. → **[Lionstone Pro](docs/PRO.md)**
+Hepsi için: `pip install "lionstone[all] @ git+https://github.com/ismailarslantas/lionstone"`. Ayrıntılar: [docs/PRO.md](docs/PRO.md)
 
 ## 🤝 Katkı
 

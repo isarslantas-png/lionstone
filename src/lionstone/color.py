@@ -1,6 +1,6 @@
 """Color Agent (core): exposure normalisation + tasteful looks + optional LUT.
 
-Order follows the spec: exposure/white balance → (camera match: Pro) →
+Order follows the spec: exposure/white balance → (camera match: multicam) →
 skin-safe contrast/saturation → optional creative LUT.
 """
 
