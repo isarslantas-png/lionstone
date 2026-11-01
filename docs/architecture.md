@@ -21,7 +21,7 @@ media ─▶ ingest ─▶ speech (ASR) ─┐
 | Graphics & Subtitles | `effects/`, `captions.py` | effect catalog, FFmpeg + Remotion renderers, SRT/VTT/ASS, RTL, Turkish casing |
 | QA | `qa.py` | technical + editorial checks; `skipped` ≠ `passed` |
 | Interfaces | `cli.py`, `mcp_server.py` | CLI and MCP tools over the same functions |
-| Extensions | `plugins.py` | entry-point plugins (Lionstone Pro is one) |
+| Extensions | `plugins.py` | entry-point plugins (the creative features, formerly Pro, load as a built-in one) |
 
 ## Design rules
 
@@ -38,5 +38,5 @@ media ─▶ ingest ─▶ speech (ASR) ─┐
 * **Output timeline** — seconds in the rendered video (`GraphicEvent.at`, captions).
   `EditPlan.source_to_output(t)` maps between them.
 
-Multi-source plans (Pro multicam) add `meta.sources = {id: {path, offset}}`; a segment's
+Multi-source plans (multicam) add `meta.sources = {id: {path, offset}}`; a segment's
 `source` picks the camera, audio always comes from the master. `camera_time = master_time + offset`.

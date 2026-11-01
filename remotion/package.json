@@ -2,7 +2,7 @@
   "name": "@lionstone/effects",
   "version": "0.1.0",
   "private": true,
-  "description": "Lionstone title & lower-third effects as Remotion compositions (free pack F01–F06).",
+  "description": "Lionstone title & lower-third effects as Remotion compositions (F01–F06 and P01–P06).",
   "license": "Apache-2.0",
   "scripts": {
     "studio": "remotion studio src/index.ts",

@@ -150,7 +150,7 @@ def build():
 
     @app.tool()
     def list_effects(category: str = "", style: str = "", tier: str = "all") -> str:
-        """List title / lower-third effects with tier (free/pro) and timing."""
+        """List title / lower-third effects with tier and timing."""
         cat = Catalog(registry().effect_dirs)
         unlocked = registry().tiers
         return json.dumps([{"id": e.id, "name": e.name, "tier": e.tier, "category": e.category,

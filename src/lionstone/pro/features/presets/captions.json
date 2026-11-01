@@ -1,0 +1,101 @@
+[
+ {
+  "id": "lionstone.caption-clean",
+  "name": "Clean Captions",
+  "kind": "caption",
+  "category": "captions",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {},
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "White, outlined, bottom-safe.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.caption-active-word",
+  "name": "Active Word Highlight",
+  "kind": "caption",
+  "category": "captions",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {},
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Current word pops in accent colour (Shorts / Reels).",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.caption-karaoke",
+  "name": "Karaoke Progress",
+  "kind": "caption",
+  "category": "captions",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {},
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Words fill with accent colour as they're spoken.",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ }
+]

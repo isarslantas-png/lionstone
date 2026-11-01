@@ -6,7 +6,7 @@ lionstone edit ep12.mp4 --language tr --title "12. Bölüm" --subtitle "Yapay ze
   --speaker "Ayşe Yılmaz|Kurucu" --speaker "Mehmet Kaya|Editör" \
   --chapter "00:04:10 Başlangıç" --chapter "00:21:30 Araçlar" --outro "Abone olmayı unutmayın"
 
-# Tight vertical cut for Reels (center crop; Pro: --reframe face)
+# Tight vertical cut for Reels (center crop; --reframe face needs OpenCV)
 lionstone edit clip.mp4 --intensity dynamic --aspect 9:16 --profile social --caption-style social
 
 # Audio-only podcast → audiogram video

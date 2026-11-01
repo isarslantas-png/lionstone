@@ -1,39 +1,32 @@
-# One look for the whole team: Lionstone Studio
+# One look for the whole team: brand kits and roles
 
-Lionstone Studio is everything in [Lionstone Pro](pro.md), licensed for 5 people, plus the tools a
+The team tools sit on top of the [creative features](pro.md) and are free for any number of people. They are what a
 team needs to keep every editor and every episode on brand: a shared workspace, roles, brand kits,
 versioned and locked presets, and batch apply. Everything below is a real run with two team members
 on the same sample episode.
-
-![Lionstone Studio](../img/studio-roles-022-1280x720.png)
 
 ![Lionstone Studio: one look for the whole team](img/studio-steps.png)
 
 ---
 
-## Step 1 — Install, activate, say who you are
+## Step 1 — Install and say who you are
 
-Each person installs Lionstone and the package as in the [Pro guide](pro.md#step-1--install-and-activate)
-and activates the **same Studio key** (it starts with `LSS1.`). Then each person tells Lionstone who
-they are, once per computer — roles follow this email:
+Each person installs Lionstone as in the [creative features guide](pro.md#step-1--install). Then each person
+tells Lionstone who they are, once per computer — roles follow this email:
 
 ```bash
-lionstone pro activate LSS1.…team-key… --as owner@studionotes.example
-```
-
-```text
-✅ Lionstone Studio (yearly, 5 seats) activated for owner@studionotes.example (valid until 2027-10-29).
-   Working as owner@studionotes.example (lionstone pro whoami).
+lionstone whoami owner@studionotes.example
+# You work as owner@studionotes.example (from this computer).
 ```
 
 On Ed's computer:
 
 ```bash
-lionstone pro whoami ed@studionotes.example
+lionstone whoami ed@studionotes.example
 # You work as ed@studionotes.example (from this computer).
 ```
 
-Render servers and CI: set `LIONSTONE_LICENSE` to the key and `LIONSTONE_USER` to an email.
+Render servers and CI: set `LIONSTONE_USER` to an email.
 
 ## Step 2 — Create the team workspace
 
@@ -64,7 +57,7 @@ lionstone team show
 | admin | + change locked presets and kits, manage members |
 | owner | + appoint admins (whoever ran `team init`) |
 
-The same `team show` on two computers sharing one key:
+The same `team show` on two computers:
 
 ```text
 owner's computer:  "you": "owner",  "as": "owner@studionotes.example"
@@ -157,13 +150,4 @@ season/ep10/plan.json: +11 × Dip to Black
 season/ep11/plan.json: +11 × Dip to Black
 ```
 
----
-
-## Renewals
-
-Every team computer picks up the renewed Studio key by itself in the last days of the old one; the
-key is also emailed to the buyer as a backup. A server that uses `LIONSTONE_LICENSE` needs the new
-key pasted in: `lionstone pro renew` prints it.
-
-→ [Get Lionstone Studio](https://aidijitalakademi.gumroad.com/l/lionstone-studio) ·
-[Compare plans](../PRO.md)
+→ [Creative features overview](../PRO.md)

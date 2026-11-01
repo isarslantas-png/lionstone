@@ -1,0 +1,36 @@
+{
+  "id": "T07",
+  "name": "Location Label",
+  "category": "lower_third",
+  "tier": "pro",
+  "style": [
+    "documentary",
+    "minimal"
+  ],
+  "description": "Location Label — Lionstone Pro typography.",
+  "use": [
+    "keypoint"
+  ],
+  "duration": {
+    "enter": 0.6,
+    "hold": 4.0,
+    "exit": 0.5
+  },
+  "parameters": {},
+  "constraints": {
+    "minDuration": 1.2,
+    "maxDuration": 20,
+    "safeArea": true,
+    "minFontPx": 20
+  },
+  "renderEngine": "ffmpeg",
+  "fallbackEngine": "ffmpeg",
+  "composition": "",
+  "supportsPreview": true,
+  "fallback": "F01",
+  "preview": "",
+  "license": {
+    "code": "Lionstone Pro EULA",
+    "assets": "no bundled assets"
+  }
+}

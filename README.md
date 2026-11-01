@@ -71,9 +71,9 @@ Check your setup any time with `lionstone doctor`.
 
 | | Guide | You'll learn |
 |---|---|---|
-| ![](docs/guides/img/free-timeline.png) | **[Your first video (free)](docs/guides/free.md)** | install, one-command edit, captions, reading the QA report, editing by text, restoring cuts |
-| ![](docs/guides/img/pro-shorts.png) | **[Finishing with Pro](docs/guides/pro.md)** | the agent, looks / transitions / animated text, previews, Shorts & Reels, Resolve / Final Cut / Premiere export |
-| ![](docs/guides/img/studio-result.jpg) | **[Teams with Studio](docs/guides/studio.md)** | roles per person, brand kits, locked presets with history, batch apply for a season |
+| ![](docs/guides/img/free-timeline.png) | **[Your first video](docs/guides/free.md)** | install, one-command edit, captions, reading the QA report, editing by text, restoring cuts |
+| ![](docs/guides/img/pro-shorts.png) | **[Creative features](docs/guides/pro.md)** | the agent, looks / transitions / animated text, previews, Shorts & Reels, Resolve / Final Cut / Premiere export |
+| ![](docs/guides/img/studio-result.jpg) | **[Team tools](docs/guides/studio.md)** | roles per person, brand kits, locked presets with history, batch apply for a season |
 
 ## 🧭 How it works
 
@@ -101,7 +101,7 @@ lionstone cuts  talk_lionstone/plan.json --restore c0004 c0011   # undo specific
 lionstone apply-transcript talk_lionstone/plan.json talk_lionstone/transcript.md
 lionstone render talk_lionstone/plan.json         # render + QA
 lionstone qa    any_video.mp4                     # QA any file
-lionstone effects list --style cinematic          # browse effects (🔒 = Pro)
+lionstone effects list --style cinematic          # browse effects 
 lionstone effects preview F03 --text "Chapter 2" --gif
 ```
 
@@ -110,7 +110,7 @@ lionstone effects preview F03 --text "Chapter 2" --gif
 
 ```
 --intensity natural|balanced|dynamic   --profile youtube|podcast|social|broadcast
---aspect 16:9|9:16|1:1|4:5             --reframe center|face(Pro)
+--aspect 16:9|9:16|1:1|4:5             --reframe center|face (needs OpenCV)
 --title / --subtitle / --outro         --speaker "Name|Title[|SPEAKER_00]" (repeatable)
 --chapter "00:12:30 Pricing"           --title-effect F01 … --lower-third-effect F05
 --captions burn|file|none              --caption-style clean|bold|social
@@ -124,7 +124,7 @@ lionstone effects preview F03 --text "Chapter 2" --gif
 
 Every effect is a JSON definition (timing, parameters, constraints, license tier, fallback) + a **Remotion** component (reference look, alpha channel) + a native **FFmpeg** renderer (zero-dependency fallback). If an effect can't render, its declared fallback runs and the report says so.
 
-| Free | | | Pro 🔒 | | |
+| Classic | | | Premium | | |
 |:-:|:-:|:-:|:-:|:-:|:-:|
 | <img src="assets/effects/F01.gif" width="200"><br>**F01** Cinematic Fade | <img src="assets/effects/F02.gif" width="200"><br>**F02** Slow Rise | <img src="assets/effects/F03.gif" width="200"><br>**F03** Line Reveal | <img src="assets/effects/P01.gif" width="200"><br>**P01** Light Sweep | <img src="assets/effects/P02.gif" width="200"><br>**P02** Footage Mask | <img src="assets/effects/P03.gif" width="200"><br>**P03** Depth Parallax |
 | <img src="assets/effects/F04.gif" width="200"><br>**F04** Chapter Card | <img src="assets/effects/F05.gif" width="200"><br>**F05** Lower Third | <img src="assets/effects/F06.gif" width="200"><br>**F06** Letter Spacing | <img src="assets/effects/P04.gif" width="200"><br>**P04** Film Grain | <img src="assets/effects/P05.gif" width="200"><br>**P05** Kinetic Words | <img src="assets/effects/P06.gif" width="200"><br>**P06** Brand Reveal |
@@ -145,36 +145,25 @@ pip install "lionstone[mcp,whisper] @ git+https://github.com/ismailarslantas/lio
 
 Then just ask: *"Edit ~/Videos/ep12.mp4 for YouTube, keep it natural, introduce Ayşe as Founder, and show me any cut you're unsure about."* The agent gets tools to `plan_edit`, read/`edit_transcript`, `restore_cuts`, `render_plan` and read the QA verdict — it can't claim success unless QA says `deliverable: true`.
 
-## 💎 Free vs Pro vs Studio
+## 💎 Everything is free
 
-The free version is a complete editor — not a demo. Pro is for people who edit every week; Studio for teams and agencies.
+Lionstone is a complete editor and **every feature is free and open source (Apache-2.0)**: no license key, no account, no watermark, no upload, no telemetry. The former Pro and Studio features are part of the core.
 
-| | **Free** (Apache-2.0) | **Pro** | **Studio** |
-|---|:-:|:-:|:-:|
-| Speech-aware cutting, 3 intensities | ✅ | ✅ | ✅ |
-| Edit by text · restore cuts · plan.json | ✅ | ✅ | ✅ |
-| Loudness, de-noise, color, LUTs | ✅ | ✅ | ✅ |
-| Captions SRT/VTT/burn-in · RTL · Turkish | ✅ | ✅ | ✅ |
-| 6 title effects (Remotion + FFmpeg) | ✅ | ✅ | ✅ |
-| Technical + editorial QA, auto-fix | ✅ | ✅ | ✅ |
-| MCP server · plugin API | ✅ | ✅ | ✅ |
-| **Multicam**: audio sync with drift check, active-speaker switching, mic bleed gating | | ✅ | ✅ |
-| **Style learning** from 1–3 reference videos (tempo, color, loudness) | | ✅ | ✅ |
-| **Shorts/Reels generator**: best moments → 9:16, face-tracked reframe, hook titles, word-highlight captions, optional LLM ranking | | ✅ | ✅ |
-| **6 Pro title effects** (light sweep, footage mask, parallax, film grain, kinetic, brand reveal) | | ✅ | ✅ |
-| **Project export**: FCPXML (Resolve / Final Cut) + EDL (Premiere) | | ✅ | ✅ |
-| **Vision QA**: graphics/captions covering faces | | ✅ | ✅ |
-| Natural / Cinematic / Dynamic variants side by side | | ✅ | ✅ |
-| **Creative Suite (new in 0.2)**: 28 looks, 19 effects, 11 transitions, 6 motion presets, 25 animated text presets, karaoke captions, real previews | | ✅ | ✅ |
-| **Lionstone Agent** picks looks, emphasis and transitions — and explains every choice | | ✅ | ✅ |
-| **Brand kits**, versioned & locked team presets, roles, batch apply across episodes | | | ✅ |
-| Seats | | 1 | 5 |
+| Feature | Command |
+|---|---|
+| Speech-aware cutting, edit by text, restore cuts, plan.json | `lionstone edit` · `plan` · `apply-transcript` |
+| Loudness, de-noise, color, LUTs, captions, RTL, Turkish | `lionstone edit` |
+| 12 title effects (F01-F06 + P01-P06) and 12 animated text presets | `lionstone effects list` |
+| **Creative Suite**: 133 looks, effects, transitions, motion and text presets with previews, keyframes and an agent that picks them | `lionstone fx list` · `fx preview` · `fx auto` |
+| **Multicam**: audio sync with drift check, active-speaker switching | `lionstone multicam` |
+| **Style learning** from 1-3 reference videos | `lionstone style learn` |
+| **Shorts/Reels generator**: best moments → 9:16, face-tracked reframe, hook titles | `lionstone clips` |
+| **Project export**: FCPXML (Resolve / Final Cut) + EDL (Premiere) | `lionstone export` |
+| **Team tools**: brand kits, roles, versioned and locked presets, batch apply | `lionstone team` · `brand` · `preset` · `fx batch` |
+| **Vision QA**: graphics/captions covering faces | `pip install "lionstone[vision]"` |
+| **Lionstone Styles**: codes like `O4 W3 A3 G5 S4 P3` that map to real edit options | `lionstone styles --open` · `--cmd O4 W3 A3` |
 
-![Pick your plan: Free, Pro, Studio](docs/img/plans-022-1280x720.png)
-
-![Lionstone Pro 0.2 — same shot, six looks](docs/img/pro-looks-1280x720.png)
-
-Pro runs **on your machine** with an offline license key — no account, no upload, no telemetry. → **[Get Lionstone Pro](docs/PRO.md)**
+Install everything with `pip install "lionstone[all] @ git+https://github.com/ismailarslantas/lionstone"`. Details: [docs/PRO.md](docs/PRO.md) and the [guides](docs/guides/pro.md).
 
 ## 🗺️ Roadmap
 
@@ -191,6 +180,6 @@ pip install -e ".[dev,whisper]" && pytest
 
 ## 📄 License
 
-Core: [Apache-2.0](LICENSE). Pro/Studio plugin: commercial license. Effect assets ship with OFL/system fonts only — check the license of any font, LUT or footage you add.
+Everything: [Apache-2.0](LICENSE). Effect assets ship with OFL/system fonts only — check the license of any font, LUT or footage you add.
 
 <p align="center"><sub>Built in İzmir by <a href="https://www.linkedin.com/in/ismailarslantas/">İsmail Arslantaş</a> · If Lionstone saved you an evening of editing, a ⭐ helps others find it.</sub></p>

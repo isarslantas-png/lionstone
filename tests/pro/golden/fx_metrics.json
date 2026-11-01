@@ -1,0 +1,44 @@
+{
+ "look-golden-hour": {
+  "YAVG": 117.7,
+  "SATAVG": 105.6,
+  "UAVG": 128.0,
+  "VAVG": 127.9
+ },
+ "look-steel-blue": {
+  "YAVG": 117.0,
+  "SATAVG": 96.1,
+  "UAVG": 130.9,
+  "VAVG": 124.7
+ },
+ "look-classic-bw": {
+  "YAVG": 119.5,
+  "SATAVG": 0.0,
+  "UAVG": 128.0,
+  "VAVG": 128.0
+ },
+ "look-punchy-social": {
+  "YAVG": 120.5,
+  "SATAVG": 109.6,
+  "UAVG": 130.3,
+  "VAVG": 126.6
+ },
+ "soft-vignette": {
+  "YAVG": 83.8,
+  "SATAVG": 75.3,
+  "UAVG": 129.3,
+  "VAVG": 125.7
+ },
+ "exposure-balance": {
+  "YAVG": 128.2,
+  "SATAVG": 109.0,
+  "UAVG": 130.1,
+  "VAVG": 126.5
+ },
+ "film-grain": {
+  "YAVG": 120.7,
+  "SATAVG": 109.0,
+  "UAVG": 130.2,
+  "VAVG": 126.7
+ }
+}

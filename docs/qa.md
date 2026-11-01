@@ -16,8 +16,8 @@
 | `choppiness` — many sub-0.45 s fragments | editorial | medium | — |
 | `caption_timing` — cues in range, no overlaps | editorial | high | — |
 | `graphics_rules` — overlap, readability, inside video | editorial | medium | — |
-| `faces_covered` — graphics over faces | editorial | medium | Pro (OpenCV) |
-| `camera_choice` — camera shows the speaker | editorial | — | Pro multicam |
+| `faces_covered` — graphics over faces | editorial | medium | needs OpenCV |
+| `camera_choice` — camera shows the speaker | editorial | — | multicam |
 
 Delivery is blocked only by `critical`. `high` issues trigger up to two fix → re-render → re-check rounds. Everything else is reported in `qa.md` for a human.
 

@@ -12,7 +12,7 @@ Lionstone follows the spec's strategy: **first a trustworthy edit + QA engine, t
 - 6 free title effects (Remotion + FFmpeg), effect catalog + JSON schema
 - Technical + editorial QA with auto-fix loop; honest `skipped` reporting
 - MCP server, plugin API, `doctor`
-- Pro plugin: multicam, style learning, Shorts generator, FCPXML/EDL, 6 Pro effects, vision QA
+- Former Pro plugin (now free, in the core): multicam, style learning, Shorts generator, FCPXML/EDL, P01-P06 effects, vision QA, Creative Suite
 
 ## 🔜 v0.2
 - [ ] Speaker diarization in the free tier (pyannote / NeMo, optional)
@@ -22,7 +22,7 @@ Lionstone follows the spec's strategy: **first a trustworthy edit + QA engine, t
 - [ ] Filler lexicons: German, Spanish, French, Arabic, Portuguese (PRs welcome!)
 - [ ] Evaluation set + KPI dashboard (cut error rate, QA catch rate, human-fix count)
 
-## 🔭 v0.3 — Studio
+## 🔭 v0.3 — Team tools
 - [ ] Personal edit memory: learn from accepted / restored cuts, inspectable & resettable
 - [ ] Batch queue, brand profiles, client approval links
 - [ ] Shot-matching color across cameras, motion-graphics templates

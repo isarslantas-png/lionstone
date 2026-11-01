@@ -1,0 +1,97 @@
+{
+  "name": "Lionstone Styles",
+  "version": 1,
+  "intro": "Pick one style per group and combine the codes, for example O4 W3 A3 G5 S4 P3. Every style is a recipe of real Lionstone options, so `lionstone styles --cmd O4 W3 A3` prints the exact edit command.",
+  "groups": [
+    {
+      "id": "O",
+      "name": "Opening",
+      "blurb": "The first seconds: how the title enters.",
+      "styles": [
+        {"code": "O1", "name": "Quiet Fade", "desc": "Title fades in and out with a slow, calm ease. Safe for interviews and lectures.", "args": ["--title-effect", "F01"]},
+        {"code": "O2", "name": "Slow Rise", "desc": "Title drifts upward while it fades in. Documentary feel.", "args": ["--title-effect", "F02"]},
+        {"code": "O3", "name": "Hairline Reveal", "desc": "A thin line draws out, then the title appears under it. Clean and corporate.", "args": ["--title-effect", "F03"]},
+        {"code": "O4", "name": "Light Sweep", "desc": "A band of light glides across the letters as they appear. Premium and cinematic.", "args": ["--title-effect", "P01"]},
+        {"code": "O5", "name": "Film Grain Open", "desc": "Title sits in animated film grain with a soft vignette. Story-driven pieces.", "args": ["--title-effect", "P04"]},
+        {"code": "O6", "name": "Kinetic Hook", "desc": "Words land one after another with a stagger. Built for Shorts and Reels hooks.", "args": ["--title-effect", "P05"]},
+        {"code": "O7", "name": "Signature Stamp", "desc": "Your brand name reveals with a short, confident flourish. Channel intros.", "args": ["--title-effect", "P06"]}
+      ]
+    },
+    {
+      "id": "W",
+      "name": "Words",
+      "blurb": "How speech shows up on screen.",
+      "styles": [
+        {"code": "W1", "name": "Clean Lines", "desc": "Readable burned-in captions, sentence case, bottom third.", "args": ["--captions", "burn", "--caption-style", "clean"]},
+        {"code": "W2", "name": "Bold Punch", "desc": "Large, heavy captions that carry the energy of the delivery.", "args": ["--captions", "burn", "--caption-style", "bold"]},
+        {"code": "W3", "name": "Word Highlight", "desc": "Social-style captions with the spoken word highlighted as it is said.", "args": ["--captions", "burn", "--caption-style", "social"]},
+        {"code": "W4", "name": "Silent Frame", "desc": "No captions on the picture. Calm, premium, or when the footage already has text.", "args": ["--captions", "none"]},
+        {"code": "W5", "name": "Sidecar Only", "desc": "Captions exported as .srt/.vtt files, nothing burned in. For YouTube and podcasts.", "args": ["--captions", "file"]}
+      ]
+    },
+    {
+      "id": "A",
+      "name": "Aspect",
+      "blurb": "Shape of the frame and how it follows the speaker.",
+      "styles": [
+        {"code": "A1", "name": "Native", "desc": "Keep the source shape untouched.", "args": []},
+        {"code": "A2", "name": "Wide Stage", "desc": "16:9 for YouTube and presentations.", "args": ["--aspect", "16:9"]},
+        {"code": "A3", "name": "Vertical Follow", "desc": "9:16 with a face-following crop. Needs OpenCV (pip install lionstone[vision]).", "args": ["--aspect", "9:16", "--reframe", "face"]},
+        {"code": "A4", "name": "Vertical Centre", "desc": "9:16 with a fixed centre crop. No extra dependencies.", "args": ["--aspect", "9:16", "--reframe", "center"]},
+        {"code": "A5", "name": "Square Follow", "desc": "1:1 with a face-following crop for feeds. Needs OpenCV.", "args": ["--aspect", "1:1", "--reframe", "face"]},
+        {"code": "A6", "name": "Portrait Feed", "desc": "4:5 centre crop, the tallest shape most feeds show uncropped.", "args": ["--aspect", "4:5", "--reframe", "center"]}
+      ]
+    },
+    {
+      "id": "G",
+      "name": "Grade",
+      "blurb": "The colour look applied after exposure correction.",
+      "styles": [
+        {"code": "G1", "name": "Untouched", "desc": "No colour work at all.", "args": ["--color", "none"]},
+        {"code": "G2", "name": "Natural", "desc": "Light contrast and saturation lift. The default, safe everywhere.", "args": ["--color", "natural"]},
+        {"code": "G3", "name": "Warm Room", "desc": "Gently warmer shadows and skin. Friendly, conversational.", "args": ["--color", "warm"]},
+        {"code": "G4", "name": "Cool Studio", "desc": "Cooler balance for tech, science and corporate topics.", "args": ["--color", "cool"]},
+        {"code": "G5", "name": "Punchy", "desc": "More contrast, saturation and local sharpness. Reads well on phones.", "args": ["--color", "punchy"]},
+        {"code": "G6", "name": "Film", "desc": "Softer saturation with a medium-contrast curve. Cinematic.", "args": ["--color", "film"]}
+      ]
+    },
+    {
+      "id": "S",
+      "name": "Sound",
+      "blurb": "Loudness target and noise handling.",
+      "styles": [
+        {"code": "S1", "name": "YouTube -14", "desc": "-14 LUFS with a -1 dB true-peak ceiling, light de-noise.", "args": ["--profile", "youtube", "--denoise", "light"]},
+        {"code": "S2", "name": "Podcast -16", "desc": "-16 LUFS for Apple and Spotify spoken word, light de-noise.", "args": ["--profile", "podcast", "--denoise", "light"]},
+        {"code": "S3", "name": "Broadcast -23", "desc": "EBU R128 at -23 LUFS for TV and festivals.", "args": ["--profile", "broadcast", "--denoise", "light"]},
+        {"code": "S4", "name": "Social -14 Tight", "desc": "-14 LUFS with a narrower loudness range so it survives phone speakers.", "args": ["--profile", "social", "--denoise", "light"]},
+        {"code": "S5", "name": "Rescue", "desc": "YouTube loudness with strong de-noise for noisy rooms.", "args": ["--profile", "youtube", "--denoise", "strong"]}
+      ]
+    },
+    {
+      "id": "P",
+      "name": "Pace",
+      "blurb": "How aggressively silences and fillers are cut.",
+      "styles": [
+        {"code": "P1", "name": "Breathing Room", "desc": "Keeps natural pauses and filler words, removes only long dead air and exact repeats.", "args": ["--intensity", "natural"]},
+        {"code": "P2", "name": "Tidy", "desc": "Removes fillers, repeats and false starts but keeps sentence beats.", "args": ["--intensity", "balanced"]},
+        {"code": "P3", "name": "Tight", "desc": "Shortest pauses and discourse markers removed. Fast, social pacing.", "args": ["--intensity", "dynamic"]}
+      ]
+    },
+    {
+      "id": "L",
+      "name": "Labels",
+      "blurb": "Chapter cards and speaker lower thirds.",
+      "styles": [
+        {"code": "L1", "name": "Editorial Labels", "desc": "Chapter cards and an editorial lower third for each new speaker.", "args": ["--chapter-effect", "F04", "--lower-third-effect", "F05"]},
+        {"code": "L2", "name": "Spaced Chapters", "desc": "Wide-tracked chapter titles with the editorial lower third.", "args": ["--chapter-effect", "F06", "--lower-third-effect", "F05"]},
+        {"code": "L3", "name": "Line Chapters", "desc": "Hairline chapter reveals, same lower third. Minimal and corporate.", "args": ["--chapter-effect", "F03", "--lower-third-effect", "F05"]}
+      ]
+    }
+  ],
+  "presets": [
+    {"name": "Podcast clip", "codes": ["O1", "W1", "A2", "G2", "S2", "P2", "L1"], "why": "Calm, readable, loudness for audio apps."},
+    {"name": "Talking-head Reel", "codes": ["O6", "W3", "A3", "G5", "S4", "P3"], "why": "Fast hook, highlighted words, phone-friendly sound."},
+    {"name": "Cinematic talk", "codes": ["O4", "W4", "A2", "G6", "S1", "P1", "L2"], "why": "Slow, premium, no captions on the picture."},
+    {"name": "Corporate explainer", "codes": ["O3", "W1", "A2", "G4", "S1", "P2", "L3"], "why": "Clean, cool and tidy."}
+  ]
+}

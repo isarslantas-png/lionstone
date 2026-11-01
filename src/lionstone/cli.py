@@ -60,11 +60,11 @@ def _add_edit_options(p: argparse.ArgumentParser) -> None:
     g.add_argument("--lut", help=".cube LUT applied after correction")
     g.add_argument("--denoise", choices=["off", "light", "strong"], default="light")
     g.add_argument("--reframe", default="center",
-                   help="aspect reframing: center · face (Pro, needs OpenCV)")
+                   help="aspect reframing: center · face (needs OpenCV)")
     g.add_argument("--renderer", choices=["auto", "ffmpeg", "remotion"], default="auto",
                    help="title renderer: Remotion when installed, FFmpeg otherwise")
     p.add_argument("--x", action="append", default=[], metavar="KEY=VALUE",
-                   help="plugin option, e.g. --x style=mystyle.json (Lionstone Pro)")
+                   help="plugin option, e.g. --x style=mystyle.json")
 
 
 def _edit_options(a: argparse.Namespace) -> EditOptions:
@@ -104,7 +104,7 @@ def _check_tiers(opts: EditOptions, catalog: Catalog) -> None:
             raise EffectError(
                 f"{fx.id} {fx.name} is a {fx.tier.upper()} effect. Free effects: "
                 f"{', '.join(e.id for e in catalog.filter(tier='free'))}. "
-                "Unlock Pro: https://github.com/ismailarslantas/lionstone/blob/main/docs/PRO.md")
+                "Run `lionstone doctor` to see which features are available.")
 
 
 # --- commands ------------------------------------------------------------------------
@@ -295,7 +295,7 @@ def cmd_doctor(a: argparse.Namespace) -> int:
     for p in reg.loaded:
         line(p["status"] == "ok", f"plugin {p['name']}", p["status"])
     if not reg.loaded:
-        line(True, "plugins", "none (Pro not installed)")
+        line(True, "plugins", "none")
     return 0 if ok else 1
 
 

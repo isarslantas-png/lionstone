@@ -214,6 +214,7 @@ See [examples/README.md](../../examples/README.md).
 
 ## Want more?
 
-[Lionstone Pro](pro.md) adds the Creative Suite (looks, effects, transitions, animated text), an
-agent that picks them and explains why, Shorts & Reels, multicam and Resolve / Final Cut / Premiere
-export. [Lionstone Studio](studio.md) adds brand kits and team roles. → [Plans and pricing](../PRO.md)
+The [creative features](pro.md) are part of Lionstone too, and free: looks, effects, transitions,
+animated text, an agent that picks them and explains why, Shorts & Reels, multicam and
+Resolve / Final Cut / Premiere export. The [team guide](studio.md) covers brand kits and roles.
+→ [Feature overview](../PRO.md)

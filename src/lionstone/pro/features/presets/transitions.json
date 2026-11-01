@@ -1,0 +1,1087 @@
+[
+ {
+  "id": "lionstone.hard-cut",
+  "name": "Hard Cut",
+  "kind": "transition",
+  "category": "basic",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {},
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "An explicit, deliberate cut. The default.",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "documentary",
+   "cinematic",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.dip-to-black",
+  "name": "Dip to Black",
+  "kind": "transition",
+  "category": "basic",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 4,
+    "max": 60,
+    "default": 16
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Out to black and back in.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "documentary",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.dip-to-white",
+  "name": "Dip to White",
+  "kind": "transition",
+  "category": "basic",
+  "tier": "free",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 4,
+    "max": 60,
+    "default": 14
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Out to white and back in.",
+  "tags": [],
+  "styles": [
+   "minimal",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.cross-dissolve",
+  "name": "Cross Dissolve",
+  "kind": "transition",
+  "category": "basic",
+  "tier": "free",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": "lionstone.dip-to-black",
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.fade-through-color",
+  "name": "Fade Through Colour",
+  "kind": "transition",
+  "category": "basic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 6,
+    "max": 60,
+    "default": 18
+   },
+   "color": {
+    "type": "color",
+    "default": "#0E0E10"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Dip through any (brand) colour.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.whip-pan",
+  "name": "Whip Pan",
+  "kind": "transition",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 6,
+    "max": 30,
+    "default": 12
+   },
+   "direction": {
+    "type": "enum",
+    "values": [
+     "left",
+     "right"
+    ],
+    "default": "left"
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Cut hidden inside a fast blurred pan.",
+  "tags": [],
+  "styles": [
+   "dynamic",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Cut-based (each side pans on its own); not a two-clip push."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.push",
+  "name": "Push",
+  "kind": "transition",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.slide",
+  "name": "Slide",
+  "kind": "transition",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.blur-slide",
+  "name": "Blur Slide",
+  "kind": "transition",
+  "category": "motion",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.zoom-through",
+  "name": "Zoom Through",
+  "kind": "transition",
+  "category": "zoom",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 8,
+    "max": 40,
+    "default": 16
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Punch in to the cut, settle out after it.",
+  "tags": [],
+  "styles": [
+   "dynamic",
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.cross-zoom",
+  "name": "Cross Zoom",
+  "kind": "transition",
+  "category": "zoom",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.match-zoom",
+  "name": "Match Zoom",
+  "kind": "transition",
+  "category": "zoom",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs subject alignment between shots."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.linear-wipe",
+  "name": "Linear Wipe",
+  "kind": "transition",
+  "category": "mask",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.shape-wipe",
+  "name": "Shape Wipe",
+  "kind": "transition",
+  "category": "mask",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.iris",
+  "name": "Iris",
+  "kind": "transition",
+  "category": "mask",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.luma-reveal-transition",
+  "name": "Luma Reveal",
+  "kind": "transition",
+  "category": "mask",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.light-leak-flash",
+  "name": "Soft Light Leak",
+  "kind": "transition",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 8,
+    "max": 45,
+    "default": 20
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Warm light wash that peaks on the cut.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.film-burn-flash",
+  "name": "Film Burn Cut",
+  "kind": "transition",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 8,
+    "max": 45,
+    "default": 18
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Orange burn flare hiding the cut.",
+  "tags": [],
+  "styles": [
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.blur-cut",
+  "name": "Gentle Blur Cut",
+  "kind": "transition",
+  "category": "cinematic",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 6,
+    "max": 40,
+    "default": 14
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Defocus into the cut and back to sharp.",
+  "tags": [],
+  "styles": [
+   "cinematic",
+   "minimal"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Stepped blur (5 stages)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.split-reveal",
+  "name": "Split Screen Reveal",
+  "kind": "transition",
+  "category": "split",
+  "tier": "studio",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.multi-panel",
+  "name": "Multi-Panel Reveal",
+  "kind": "transition",
+  "category": "split",
+  "tier": "studio",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs both clips on screen at once (overlapping render). The core concatenates segments, so this is planned until overlap rendering lands."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.glitch-cut",
+  "name": "Subtle Glitch Cut",
+  "kind": "transition",
+  "category": "stylized",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 4,
+    "max": 20,
+    "default": 8
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Brief RGB split + noise across the cut.",
+  "tags": [],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.rgb-shift-cut",
+  "name": "RGB Shift Cut",
+  "kind": "transition",
+  "category": "stylized",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "frames": {
+    "type": "int",
+    "min": 4,
+    "max": 20,
+    "default": 8
+   },
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "Channel offset that snaps back after the cut.",
+  "tags": [],
+  "styles": [
+   "social",
+   "dynamic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.ripple-transition",
+  "name": "Ripple",
+  "kind": "transition",
+  "category": "stylized",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Not implemented in the FFmpeg renderer yet — listed for the roadmap; can't be applied."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.match-cut-assist",
+  "name": "Match Cut Assist",
+  "kind": "transition",
+  "category": "minimal",
+  "tier": "pro",
+  "implementationStatus": "planned",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "",
+  "tags": [],
+  "styles": [],
+  "supportedRenderers": [],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {},
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Needs shot similarity analysis."
+  ],
+  "pipeline": "filter"
+ }
+]

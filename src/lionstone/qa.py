@@ -250,7 +250,7 @@ def check_editorial(plan: EditPlan, r: QAReport, catalog: Catalog | None, durati
         r.issues.append(QAIssue("graphics_rules", "medium",
                                 f'"{e.text}" is on screen too briefly to read', at=e.at))
     r.checks.append(QACheck("faces_covered", "editorial", "skipped",
-                            "needs face detection (Lionstone Pro vision QA)"))
+                            "needs face detection (vision QA, needs OpenCV)"))
     r.checks.append(QACheck("camera_choice", "editorial", "skipped",
                             "single-camera edit" if not plan.meta.get("multicam") else
                             "verified by multicam plugin"))
