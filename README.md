@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="Lionstone — open-source AI editing agent" width="100%">
+  <a href="https://github.com/ismailarslantas/lionstone/releases/latest"><img src="assets/pro-studio/01-hero.jpg" alt="Lionstone Pro & Studio are now free — open source, Apache-2.0, local-first, no license keys, no watermark" width="100%"></a>
 </p>
 
 <p align="center">
@@ -12,13 +12,83 @@
 </p>
 
 <p align="center">
-  <b>Turn a raw podcast, interview or talk into a publish-ready video — with an edit plan you can read, undo and verify.</b><br>
-  Local-first · no upload · no watermark · works offline · <a href="README.tr.md">Türkçe</a>
+  <b>Lionstone Pro & Studio are now free.</b> The complete AI video editor — multicam, Creative Suite, Shorts generator, NLE export, team tools and Lionstone Styles — in one open-source package.<br>
+  Local-first · no upload · no license key · no watermark · works offline · <a href="https://github.com/ismailarslantas/lionstone/releases/latest">Latest release</a> · <a href="README.tr.md">Türkçe</a>
 </p>
+
+```bash
+pip install "lionstone[all] @ git+https://github.com/ismailarslantas/lionstone"
+lionstone doctor
+```
 
 ---
 
-Most "AI editors" either chop every silence (and your sentences with it) or send your footage to a cloud you don't control. **Lionstone edits like a careful human editor**: it understands the words, keeps meaningful pauses, never cuts inside a word, explains every cut, and **refuses to say "done" until QA has actually checked the file.**
+## 🦁 Lionstone Pro & Studio — now free
+
+Lionstone Pro ($12/month) and Lionstone Studio ($39/month) used to be a separate, paid plugin. Since **v0.3** every one of their features ships in this repository under Apache-2.0. There is nothing to buy, activate or renew, and nothing leaves your computer.
+
+<img src="assets/pro-studio/02-what-changed.jpg" alt="What changed: paid Pro and Studio plans are now completely free and built into the core" width="100%">
+
+| Before | Now |
+|---|---|
+| Lionstone Pro — $12/month | **Free**, built into the core |
+| Lionstone Studio — $39/month (5 seats) | **Free**, for any team size |
+| License keys, activation, renewal | **None** |
+| Locked premium presets and watermarked previews | **Every preset unlocked** |
+| Separate `lionstone-pro` package | **One package**: `lionstone` |
+
+Coming from the paid plugin? Run `pip uninstall lionstone-pro`, then install as above. `lionstone pro whoami` is now `lionstone whoami`; `activate`, `status` and `renew` are gone.
+
+### ✂️ Edits that understand speech
+
+<img src="assets/pro-studio/03-smart-editing.jpg" alt="Smart editing: speech-aware cuts, explainable plan.json, edit via transcript, one-command restore" width="100%">
+
+Most "AI editors" either chop every silence (and your sentences with it) or send your footage to a cloud you don't control. **Lionstone edits like a careful human editor.** It transcribes your video locally with word timestamps, removes fillers (`um`, `uh`, `ııı`, `eee`), stutters, repeated phrases and false starts, keeps the pauses that carry meaning, and **never cuts inside a word**. Every decision is written to `plan.json` with its reason, so you can read the edit, change it by editing `transcript.md`, or undo any cut with `lionstone cuts plan.json --restore c0004`. Your original files are never touched.
+
+### 🎨 Creative Suite — 133 presets, 25 animated text styles
+
+<img src="assets/pro-studio/04-creative-suite.jpg" alt="Creative Suite: 133 original presets, before/after previews, 25 animated text styles, karaoke captions, Lionstone Agent" width="100%">
+
+- **133 original presets** — looks, effects, transitions and motion. Browse with `lionstone fx list`, inspect with `lionstone fx show soft-bloom`.
+- **Real previews before you commit** — `lionstone fx preview soft-bloom --before-after --gif` renders a low-res before/after with the same code the final export uses.
+- **25 animated text presets** — Word Pop, Counter Up, Price Reveal, Stat Emphasis, Location and Speaker labels, Call to Action, Type-on, Signature End Card — plus karaoke captions that highlight each word as it is spoken.
+- **Lionstone Agent** — `lionstone fx auto plan.json --content vlog --style social` picks one consistent look, emphasis zooms and transitions on real topic changes, stays within budgets, and gives a reason for every choice.
+- **Safe by design** — `lionstone fx render` checks flash rate (≤ 3 per second), exposure, saturation and stale edits before it delivers.
+
+### 🎬 Pro workflow — multicam, style learning, Shorts, NLE export
+
+<img src="assets/pro-studio/05-pro-workflow.jpg" alt="Pro workflow: multicam, style learn, clips for Shorts and Reels, export to DaVinci Resolve, Final Cut and Premiere" width="100%">
+
+- **Multicam** — `lionstone multicam` syncs two or more cameras and isolated mics on their audio, re-checks sync to catch clock drift, gates mic bleed and cuts to the active speaker with sensible shot lengths and wide shots for crosstalk.
+- **Style learning** — `lionstone style learn ref1.mp4 ref2.mp4` learns cut rhythm, pause behaviour, loudness and colour from videos you like, then applies them to new edits.
+- **Shorts & Reels** — `lionstone clips plan.json -n 5` finds self-contained moments with a strong first line and renders them 9:16 with face-tracked reframing, a kinetic hook title and word-highlight captions.
+- **Hand off to your editor** — `lionstone export plan.json` writes FCPXML for DaVinci Resolve and Final Cut Pro, and EDL for Premiere Pro, pointing at your original media.
+
+### ✅ QA, team tools and agents
+
+<img src="assets/pro-studio/06-qa-teams-get-it.jpg" alt="Quality assurance, team workflows, Lionstone Styles and Claude/MCP integration" width="100%">
+
+- **QA before delivery** — every render is decoded end to end and checked for A/V sync, black and frozen frames, EBU R128 loudness and true peak, clicks at every join, caption timing and, with `lionstone[vision]`, titles or captions covering a face. Skipped checks are reported as skipped, never as passed.
+- **Team tools (formerly Studio)** — roles per person (`lionstone team`), brand kits with colours, fonts, logo, lower third and end card (`lionstone brand`), versioned and locked team presets with history, and `lionstone fx batch` to apply one look to a whole season.
+- **Agent-ready** — the built-in MCP server lets Claude, Cursor or any MCP client plan, review and render edits for you.
+
+### 🧭 New: Lionstone Styles
+
+Original style recipes you combine like a code: one pick per group, e.g. `O6 W3 A3 G5 S4 P3`. Every code maps to real Lionstone options, so `lionstone styles --cmd O6 W3 A3 G5 S4 P3` prints the exact edit command and `lionstone styles --open` shows the visual guide.
+
+| Group | Controls | Codes |
+|---|---|---|
+| **O** Opening | how the title enters | O1 Quiet Fade · O2 Slow Rise · O3 Hairline Reveal · O4 Light Sweep · O5 Film Grain Open · O6 Kinetic Hook · O7 Signature Stamp |
+| **W** Words | how speech shows on screen | W1 Clean Lines · W2 Bold Punch · W3 Word Highlight · W4 Silent Frame · W5 Sidecar Only |
+| **A** Aspect | frame shape and speaker follow | A1 Native · A2 Wide Stage · A3 Vertical Follow · A4 Vertical Centre · A5 Square Follow · A6 Portrait Feed |
+| **G** Grade | colour look | G1 Untouched · G2 Natural · G3 Warm Room · G4 Cool Studio · G5 Punchy · G6 Film |
+| **S** Sound | loudness and de-noise | S1 YouTube −14 · S2 Podcast −16 · S3 Broadcast −23 · S4 Social −14 Tight · S5 Rescue |
+| **P** Pace | how tightly pauses are cut | P1 Breathing Room · P2 Tidy · P3 Tight |
+| **L** Labels | chapter cards and lower thirds | L1 Editorial Labels · L2 Spaced Chapters · L3 Line Chapters |
+
+Starting points: **Podcast clip** `O1 W1 A2 G2 S2 P2 L1` · **Talking-head Reel** `O6 W3 A3 G5 S4 P3` · **Cinematic talk** `O4 W4 A2 G6 S1 P1 L2` · **Corporate explainer** `O3 W1 A2 G4 S1 P2 L3`. A Claude skill in [`integrations/lionstone-styles`](integrations/lionstone-styles) edits with these codes.
+
+---
 
 <p align="center">
   <img src="assets/demo-terminal.svg" alt="lionstone edit run" width="88%">
@@ -33,7 +103,7 @@ Most "AI editors" either chop every silence (and your sentences with it) or send
 | 📝 **Edit video by editing text** | Delete a line in `transcript.md` → that sentence is cut. Move lines → scenes reorder. Uncomment → it's back. |
 | 🔊 **Broadcast-grade audio** | Two-pass EBU R128 loudness (YouTube −14, podcast −16, broadcast −23 LUFS), true-peak ceiling, de-noise, 8 ms micro-fades at every join (no clicks). |
 | 🎨 **Color & look** | Auto-exposure, tasteful looks (`natural`, `warm`, `film`, `punchy`…), your own `.cube` LUT. |
-| 🔤 **Titles, lower thirds, captions** | 6 free title effects, SRT/VTT/ASS captions, burned-in captions that move out of the way of lower thirds. Turkish casing (`i → İ`) and right-to-left scripts handled. |
+| 🔤 **Titles, lower thirds, captions** | 12 title effects, SRT/VTT/ASS captions, burned-in captions that move out of the way of lower thirds. Turkish casing (`i → İ`) and right-to-left scripts handled. |
 | ✅ **QA before delivery** | Full decode, A/V length, black/frozen frames, loudness + true peak, clicks at every join, word-clipping, caption timing, graphics overlap/readability. **Skipped checks are reported as skipped — never as passed.** Auto-fixes what it can, then re-checks. |
 | 🤖 **Agent-ready** | Built-in **MCP server**: let Claude, Cursor or any MCP client plan, review and render edits for you. |
 | 🧩 **Plugin system** | Effects, commands, exporters, QA hooks, caption styles and reframers are all plugins. |
@@ -145,9 +215,9 @@ pip install "lionstone[mcp,whisper] @ git+https://github.com/ismailarslantas/lio
 
 Then just ask: *"Edit ~/Videos/ep12.mp4 for YouTube, keep it natural, introduce Ayşe as Founder, and show me any cut you're unsure about."* The agent gets tools to `plan_edit`, read/`edit_transcript`, `restore_cuts`, `render_plan` and read the QA verdict — it can't claim success unless QA says `deliverable: true`.
 
-## 💎 Everything is free
+## 💎 Feature reference — everything is free
 
-Lionstone is a complete editor and **every feature is free and open source (Apache-2.0)**: no license key, no account, no watermark, no upload, no telemetry. The former Pro and Studio features are part of the core.
+Every feature is free and open source (Apache-2.0): no license key, no account, no watermark, no upload, no telemetry. The former Pro and Studio features are part of the core.
 
 | Feature | Command |
 |---|---|
@@ -167,7 +237,7 @@ Install everything with `pip install "lionstone[all] @ git+https://github.com/is
 
 ## 🗺️ Roadmap
 
-See [ROADMAP.md](ROADMAP.md). Next up: speaker diarization in the free tier, segment-level re-render, browser review UI (player + transcript + timeline), filler detection without ASR, more languages for filler lexicons.
+See [ROADMAP.md](ROADMAP.md). Next up: built-in speaker diarization, segment-level re-render, browser review UI (player + transcript + timeline), filler detection without ASR, more languages for filler lexicons.
 
 ## 🤝 Contributing
 
