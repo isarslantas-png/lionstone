@@ -31,6 +31,7 @@ Original Lionstone looks, effects, transitions, motion and animated text — pre
 | `lionstone fx text plan.json counter-up --text "Customers" --at 12 --param to=250` | 25 animated text presets — Word Pop, Counter Up, Price Reveal, Stat, Location/Speaker labels, CTA, Type-on, End Card — plus karaoke captions. |
 | `lionstone fx auto plan.json --content vlog --style social` | Lionstone Agent picks one consistent look, emphasis zooms and transitions on real topic changes, within budgets — with a reason for every decision. |
 | `lionstone fx render plan.json` | Compile + render + QA (flash limit ≤ 3/s, exposure, saturation, stale-edit check). |
+| `lionstone fx apply plan.json stage-light --source 0-3.5` · `lionstone fx showcase stage-light talk.mp4` | **Reel FX Pack**: 12 one-command effects for Reels & Shorts (stage-light, press-mono, frost-panels, duotone-pop, scan-line, afterimage, halo-orbit, neon-outline, insight-split, brand-frame, progress-rail, pixel-resolve) and 6.4 s showcase reels. Guide: [reel-fx.md](reel-fx.md). |
 
 Features that aren't finished yet (two-clip cross dissolves, particles, subject masking) are listed as **planned** in the catalog — never shipped as buttons that do nothing. Text presets need an FFmpeg build with `drawtext`; on builds without it (e.g. Homebrew's default), Lionstone skips them with a clear message.
 
