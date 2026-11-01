@@ -155,8 +155,11 @@ def build_graph(plan: EditPlan, info: MediaInfo, opts: RenderOptions, workdir: P
             else:
                 parts.append(f"[0:v]trim=start={a:.6f}:end={b:.6f},setpts=PTS-STARTPTS[v{i}]")
             labels.append(f"[v{i}]")
+        # apad: a segment that runs past the end of the source audio (audio shorter than
+        # video) is padded with silence so audio and video keep the same length.
         parts.append(
             f"[0:a]atrim=start={a:.6f}:end={b:.6f},asetpts=PTS-STARTPTS,"
+            f"apad=whole_dur={dur:.6f},"
             f"afade=t=in:d={FADE}:curve=qsin,afade=t=out:st={fade_out:.6f}:d={FADE}:curve=qsin[a{i}]"
         )
         labels.append(f"[a{i}]")
