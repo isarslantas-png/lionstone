@@ -1,0 +1,788 @@
+[
+ {
+  "id": "lionstone.stage-light",
+  "name": "Stage Light",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   },
+   "x": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   },
+   "y": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.36
+   },
+   "size": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "the room goes dark, you stay lit — Two eased vignette passes centred on the speaker plus a gentle exposure and saturation drop outside the pool of light. Ramps in and out with the window.",
+  "tags": [
+   "reel",
+   "vertical",
+   "light",
+   "focus"
+  ],
+  "styles": [
+   "social",
+   "cinematic"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.press-mono",
+  "name": "Press Mono",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.8
+   },
+   "grain": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.4
+   },
+   "paper": {
+    "type": "color",
+    "default": "#F2EAD8"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "you, printed in tomorrow's paper — Documentary black-and-white with crushed blacks, paper-tinted whites, ink sharpening and print grain. Pair with a text preset for stamped headlines.",
+  "tags": [
+   "reel",
+   "vertical",
+   "mono",
+   "documentary"
+  ],
+  "styles": [
+   "social",
+   "documentary"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.frost-panels",
+  "name": "Frost Panels",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "panels": {
+    "type": "int",
+    "min": 1,
+    "max": 3,
+    "default": 2
+   },
+   "frost": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.6
+   },
+   "tint": {
+    "type": "color",
+    "default": "#FFFFFF"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "glass cards float beside you — Up to three frosted-glass cards (blurred, lifted, tinted, outlined) appear one after another beside the speaker, with placeholder lines for your own text.",
+  "tags": [
+   "reel",
+   "vertical",
+   "glass",
+   "ui"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Cards sit at fixed safe positions (left/right of a centred speaker)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.duotone-pop",
+  "name": "Duotone Pop",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 1.0
+   },
+   "shadow": {
+    "type": "color",
+    "default": "#1A1238"
+   },
+   "highlight": {
+    "type": "color",
+    "default": "#FF8A3D"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "two colours, zero noise — Maps the shot onto two colours (shadows → highlights) for a bold poster look. Set both colours to your brand palette.",
+  "tags": [
+   "reel",
+   "vertical",
+   "color",
+   "poster"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.scan-line",
+  "name": "Scan Line",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.7
+   },
+   "speed": {
+    "type": "number",
+    "min": 0.2,
+    "max": 2.0,
+    "default": 0.6,
+    "unit": "sweeps/s"
+   },
+   "color": {
+    "type": "color",
+    "default": "#7CF5FF"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "a light beam reads the frame — A crisp glowing line with a soft trailing band sweeps top to bottom on repeat — ideal for 'AI analysing' or before/after moments.",
+  "tags": [
+   "reel",
+   "vertical",
+   "tech",
+   "ai"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.afterimage",
+  "name": "Afterimage",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.8
+   },
+   "decay": {
+    "type": "number",
+    "min": 0.5,
+    "max": 0.99,
+    "default": 0.92
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "every move leaves a trail — Bright parts of the image decay slowly, so gestures, head turns and products leave luminous trails.",
+  "tags": [
+   "reel",
+   "vertical",
+   "motion",
+   "trail"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Trails come from bright areas; works best on lit subjects."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.halo-orbit",
+  "name": "Halo Orbit",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "color": {
+    "type": "color",
+    "default": "#FFD27A"
+   },
+   "x": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   },
+   "y": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.2
+   },
+   "radius": {
+    "type": "number",
+    "min": 0.1,
+    "max": 0.45,
+    "default": 0.3
+   },
+   "dots": {
+    "type": "int",
+    "min": 3,
+    "max": 12,
+    "default": 8
+   },
+   "speed": {
+    "type": "number",
+    "min": 0.05,
+    "max": 1.0,
+    "default": 0.3,
+    "unit": "rev/s"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "a ring of light circles your head — Glowing dots on a tilted elliptical ring rotate around the speaker's head. Position, radius, dot count, speed and colour are adjustable.",
+  "tags": [
+   "reel",
+   "vertical",
+   "orbit",
+   "glow"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Ring is drawn in front of the speaker (no depth sorting)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.neon-outline",
+  "name": "Neon Outline",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "pro",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "intensity": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.75
+   },
+   "detail": {
+    "type": "number",
+    "min": 0.0,
+    "max": 1.0,
+    "default": 0.5
+   },
+   "color": {
+    "type": "color",
+    "default": "#FF4FD8"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "neon traces your silhouette — Edge detection tinted to a neon colour and glowed, screened over the shot.",
+  "tags": [
+   "reel",
+   "vertical",
+   "neon",
+   "edges"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.insight-split",
+  "name": "Insight Split",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "studio",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "split": {
+    "type": "number",
+    "min": 0.25,
+    "max": 0.5,
+    "default": 0.38
+   },
+   "bars": {
+    "type": "int",
+    "min": 2,
+    "max": 7,
+    "default": 5
+   },
+   "values": {
+    "type": "list",
+    "items": {
+     "type": "number",
+     "min": 0,
+     "max": 1
+    },
+    "default": []
+   },
+   "bg": {
+    "type": "color",
+    "default": "#14161C"
+   },
+   "accent": {
+    "type": "color",
+    "default": "#E8A33D"
+   }
+  },
+  "performanceCost": "medium",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "your numbers on top, you below — Brand-coloured chart panel fills the top of the frame; bars rise one by one (your values or an automatic rising series) while the speaker moves to the lower part.",
+  "tags": [
+   "reel",
+   "vertical",
+   "chart",
+   "data",
+   "brand"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "Speaker crop keeps the upper-middle of the frame (centred faces)."
+  ],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.brand-frame",
+  "name": "Brand Frame",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "studio",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "inset": {
+    "type": "number",
+    "min": 0.7,
+    "max": 0.95,
+    "default": 0.84
+   },
+   "bg": {
+    "type": "color",
+    "default": "#14161C"
+   },
+   "accent": {
+    "type": "color",
+    "default": "#E8A33D"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "your clip, framed in your brand — The clip sits inside an accent-bordered card on your brand background with a small accent tab underneath — consistent series framing for a whole channel.",
+  "tags": [
+   "reel",
+   "vertical",
+   "brand",
+   "frame"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.progress-rail",
+  "name": "Progress Rail",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "studio",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "steps": {
+    "type": "int",
+    "min": 2,
+    "max": 8,
+    "default": 5
+   },
+   "side": {
+    "type": "enum",
+    "values": [
+     "left",
+     "right",
+     "top"
+    ],
+    "default": "left"
+   },
+   "track": {
+    "type": "color",
+    "default": "#FFFFFF"
+   },
+   "accent": {
+    "type": "color",
+    "default": "#E8A33D"
+   }
+  },
+  "performanceCost": "low",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "a rail fills as you count the steps — A brand rail fills across the window while step dots light up in sequence — for lists, tutorials and 'step 3 of 5' content.",
+  "tags": [
+   "reel",
+   "vertical",
+   "steps",
+   "list",
+   "brand"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [],
+  "pipeline": "filter"
+ },
+ {
+  "id": "lionstone.pixel-resolve",
+  "name": "Pixel Resolve",
+  "kind": "effect",
+  "category": "reel-fx",
+  "tier": "studio",
+  "implementationStatus": "ready",
+  "version": 1,
+  "parameters": {
+   "duration": {
+    "type": "number",
+    "min": 0.4,
+    "max": 3.0,
+    "default": 1.2,
+    "unit": "s"
+   },
+   "tone_a": {
+    "type": "color",
+    "default": "#14161C"
+   },
+   "tone_b": {
+    "type": "color",
+    "default": "#E8A33D"
+   }
+  },
+  "performanceCost": "high",
+  "license": {
+   "source": "lionstone-original",
+   "verified": true
+  },
+  "description": "your shot assembles out of pixels — Signature reveal: the frame starts as a coarse two-tone dither in your brand colours and resolves through finer pixel stages into the clean shot.",
+  "tags": [
+   "reel",
+   "vertical",
+   "reveal",
+   "pixel",
+   "brand"
+  ],
+  "styles": [
+   "social"
+  ],
+  "supportedRenderers": [
+   "ffmpeg"
+  ],
+  "compatibleMedia": [
+   "video",
+   "image"
+  ],
+  "duration": {
+   "default": 4.0,
+   "min": 1.0,
+   "max": 60.0
+  },
+  "intensityRange": [
+   0.0,
+   1.0
+  ],
+  "fallbackEffectId": null,
+  "limitations": [
+   "The reveal plays at the start of each window; the rest is clean."
+  ],
+  "pipeline": "filter"
+ }
+]
