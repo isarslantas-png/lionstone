@@ -59,7 +59,7 @@ def t01_word_pop(fx: Effect, ev: GraphicEvent, inp: str, ctx: FxContext):
         a = t0 + i * slot
         b = t1 if i == len(words) - 1 else a + slot
         out = ctx.label()
-        fs = f"{size}*(0.78+0.22*{_spring(a)})"
+        fs = size  # constant: a time-varying fontsize segfaults some Linux FFmpeg builds
         parts.append(
             f"[{cur}]drawtext={ctx.fontopt()}textfile='{ctx.textfile(smart_upper(w))}':"
             f"expansion=none:fontsize='{fs}':fontcolor="
@@ -149,7 +149,7 @@ def t05_price(fx, ev, inp, ctx):
                                color="0xBBBBBB"))
         cur = o
     o = ctx.label()
-    fs = f"{size}*(0.8+0.2*{_spring(t0 + 0.15)})"
+    fs = size  # constant: a time-varying fontsize segfaults some Linux FFmpeg builds
     parts.append(f"[{cur}]drawtext={ctx.fontopt()}textfile='{ctx.textfile(ev.text)}':"
                  f"expansion=none:fontsize='{fs}':fontcolor=0x111111:box=1:"
                  f"boxcolor={ctx.accent}@0.95:boxborderw={int(size * 0.25)}:"
