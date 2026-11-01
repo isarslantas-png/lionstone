@@ -55,6 +55,19 @@ Most "AI editors" either chop every silence (and your sentences with it) or send
 - **Lionstone Agent** — `lionstone fx auto plan.json --content vlog --style social` picks one consistent look, emphasis zooms and transitions on real topic changes, stays within budgets, and gives a reason for every choice.
 - **Safe by design** — `lionstone fx render` checks flash rate (≤ 3 per second), exposure, saturation and stale edits before it delivers.
 
+### 🎞️ New: Reel FX Pack — 12 one-command effects for Reels & Shorts
+
+<img src="docs/img/reelfx-banner-1280x640.png" alt="Reel FX Pack: 12 one-command effects for Reels and Shorts — stage-light, insight-split, pixel-resolve and more" width="100%">
+
+- **8 creative effects** — `stage-light` (the room goes dark, you stay lit), `press-mono`, `frost-panels`, `duotone-pop`, `scan-line`, `afterimage`, `halo-orbit`, `neon-outline`.
+- **4 brand-aware effects** — `insight-split` (your numbers on top, you below), `brand-frame`, `progress-rail`, `pixel-resolve`; colours come from your brand kit.
+- **One command each**, on the whole video, a segment or a time range: `lionstone fx apply plan.json stage-light --source 0-3.5`. Works on 9:16, 1:1 and 16:9; pure FFmpeg, same code for preview and export.
+- **FX Showcase Reel** — `lionstone fx showcase stage-light talk.mp4` renders a 6.4 s 1080×1920 "one command, one clip, one effect" reel: the command types itself, the clip dissolves through a pixel dither, and the real render fills the screen.
+
+<img src="docs/img/reelfx-real-renders-1280x720.png" alt="Real Lionstone renders of the 12 Reel FX effects on the same clip" width="100%">
+
+Full guide with parameters, use cases and recipes: [docs/reel-fx.md](docs/reel-fx.md).
+
 ### 🎬 Pro workflow — multicam, style learning, Shorts, NLE export
 
 <img src="assets/pro-studio/05-pro-workflow.jpg" alt="Pro workflow: multicam, style learn, clips for Shorts and Reels, export to DaVinci Resolve, Final Cut and Premiere" width="100%">
@@ -262,6 +275,7 @@ Every feature is free and open source (Apache-2.0): no license key, no account, 
 | **Multicam**: audio sync with drift check, active-speaker switching | `lionstone multicam` |
 | **Style learning** from 1-3 reference videos | `lionstone style learn` |
 | **Shorts/Reels generator**: best moments → 9:16, face-tracked reframe, hook titles | `lionstone clips` |
+| **Reel FX Pack**: 12 one-command Reels/Shorts effects + 6.4 s showcase reels | `lionstone fx list --category reel-fx` · `fx showcase` |
 | **Project export**: FCPXML (Resolve / Final Cut) + EDL (Premiere) | `lionstone export` |
 | **Team tools**: brand kits, roles, versioned and locked presets, batch apply | `lionstone team` · `brand` · `preset` · `fx batch` |
 | **Vision QA**: graphics/captions covering faces | `pip install "lionstone[vision]"` |

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.2 — 2026-11-01
+- **Reel FX Pack**: 12 original one-command effects for vertical Reels & Shorts (catalog category `reel-fx`, 145 presets in total). Creative: `stage-light`, `press-mono`, `frost-panels`, `duotone-pop`, `scan-line`, `afterimage`, `halo-orbit`, `neon-outline`. Brand-aware (colours as parameters, set by brand kits): `insight-split`, `brand-frame`, `progress-rail`, `pixel-resolve`. Pure FFmpeg (`pro/features/renderers/reel_fx.py`), relative geometry for 9:16 / 1:1 / 16:9, same builders for preview and export.
+- **`lionstone fx showcase <effect> clip.mp4`** renders a 6.4 s 1080×1920 "one command" reel: the command types itself, a card shows the effect's promise, the clip dissolves through a gold/ink pixel dither and the real render fills the screen with an "Edited with Lionstone" pill.
+- Guide `docs/reel-fx.md` with real renders and new docs visuals; `tools/gen_reel_presets.py` regenerates `presets/reelfx.json`.
+- Tests: every Reel FX effect renders on 9:16 and 16:9, compiles into a plan, and the showcase renders 1080×1920.
+
 ## 0.3.1 — 2026-11-01
 - **Fix: audio/video stay in sync when the source audio ends before the video.** A kept segment that ran past the end of the audio produced a shorter audio piece, so the render drifted (QA reported it as `av_length`, and blocked delivery above 0.5 s). Each segment's audio is now padded with silence to the segment length.
 - The many-features render test prints the QA report when it fails and now requires `av_length` to pass.
