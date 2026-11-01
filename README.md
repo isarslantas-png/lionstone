@@ -13,7 +13,7 @@
 
 <p align="center">
   <b>Lionstone Pro & Studio are now free.</b> The complete AI video editor — multicam, Creative Suite, Shorts generator, NLE export, team tools and Lionstone Styles — in one open-source package.<br>
-  Local-first · no upload · no license key · no watermark · works offline · <a href="https://github.com/ismailarslantas/lionstone/releases/latest">Latest release</a> · <a href="README.tr.md">Türkçe</a>
+  Local-first · no upload · no license key · no watermark · works offline · <a href="https://github.com/ismailarslantas/lionstone/releases/latest">Latest release</a>
 </p>
 
 ```bash
