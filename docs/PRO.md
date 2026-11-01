@@ -56,6 +56,11 @@ in a source checkout; without it P03-P06 render with their FFmpeg versions and P
 
 ## Lionstone Styles
 
+![Lionstone Styles — your edit, as a code](../assets/pro-studio/07-styles-hero.jpg)
+![Opening, Words and Aspect](../assets/pro-studio/08-styles-opening-words-aspect.jpg)
+![Grade, Sound, Pace and Labels](../assets/pro-studio/09-styles-grade-sound-pace-labels.jpg)
+![Start from a recipe](../assets/pro-studio/10-styles-recipes.jpg)
+
 `lionstone styles` lists style codes (`O4 W3 A3 G5 S4 P3`) that map to real edit options.
 `lionstone styles --cmd O4 W3 A3` prints the edit command, `--open` shows the visual guide, and
 `integrations/lionstone-styles` is a Claude skill that edits with them.

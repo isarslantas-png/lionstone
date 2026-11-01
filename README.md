@@ -72,9 +72,29 @@ Most "AI editors" either chop every silence (and your sentences with it) or send
 - **Team tools (formerly Studio)** — roles per person (`lionstone team`), brand kits with colours, fonts, logo, lower third and end card (`lionstone brand`), versioned and locked team presets with history, and `lionstone fx batch` to apply one look to a whole season.
 - **Agent-ready** — the built-in MCP server lets Claude, Cursor or any MCP client plan, review and render edits for you.
 
-### 🧭 New: Lionstone Styles
+### 🧭 New: Lionstone Styles — your edit, as a code
 
-Original style recipes you combine like a code: one pick per group, e.g. `O6 W3 A3 G5 S4 P3`. Every code maps to real Lionstone options, so `lionstone styles --cmd O6 W3 A3 G5 S4 P3` prints the exact edit command and `lionstone styles --open` shows the visual guide.
+<img src="assets/pro-studio/07-styles-hero.jpg" alt="Lionstone Styles: the code O6 W3 A3 G5 S4 P3 (Kinetic Hook, Word Highlight, Vertical Follow, Punchy, Social -14 Tight, Tight) becomes lionstone styles --cmd O6 W3 A3 G5 S4 P3" width="100%">
+
+Describing a look in words ("fast, vertical, punchy, captions that pop") is vague; Lionstone Styles makes it exact. Each style is an original recipe with a short code, and you build a whole edit by picking **one code per group** — opening, words, aspect, grade, sound, pace and labels. A code is not a filter or a black box: every code maps to real Lionstone edit options, so you can read exactly what it will do, share it with your team, and reuse it on every episode.
+
+```bash
+lionstone styles --cmd O6 W3 A3 G5 S4 P3
+# → lionstone edit video.mp4 --title-effect P05 --captions burn --caption-style social
+#     --aspect 9:16 --reframe face --color punchy --profile social --denoise light --intensity dynamic
+```
+
+<img src="assets/pro-studio/08-styles-opening-words-aspect.jpg" alt="Lionstone Styles groups Opening (O1-O7), Words (W1-W5) and Aspect (A1-A6)" width="100%">
+
+**Opening** decides how the title enters — from a calm Quiet Fade for interviews to a Kinetic Hook built for Shorts. **Words** decides how speech appears on screen: clean or bold burned-in captions, social-style word highlighting, no captions at all, or sidecar `.srt`/`.vtt` files only. **Aspect** sets the frame: keep the source shape, go 16:9, or go vertical, square or 4:5 — with or without a crop that follows the speaker's face.
+
+<img src="assets/pro-studio/09-styles-grade-sound-pace-labels.jpg" alt="Lionstone Styles groups Grade (G1-G6), Sound (S1-S5), Pace (P1-P3) and Labels (L1-L3)" width="100%">
+
+**Grade** picks the colour look, from untouched to warm, cool, punchy or film. **Sound** sets the loudness target for the platform — YouTube −14, podcast −16, broadcast −23 LUFS, a tighter social mix — or rescues a noisy room with strong de-noise. **Pace** decides how tightly pauses and fillers are cut, and **Labels** chooses the chapter cards and speaker lower thirds.
+
+<img src="assets/pro-studio/10-styles-recipes.jpg" alt="Lionstone Styles starting recipes: Podcast clip, Talking-head Reel, Cinematic talk and Corporate explainer" width="100%">
+
+Not sure where to start? Use a ready recipe and change one code at a time.
 
 | Group | Controls | Codes |
 |---|---|---|
@@ -86,7 +106,21 @@ Original style recipes you combine like a code: one pick per group, e.g. `O6 W3 
 | **P** Pace | how tightly pauses are cut | P1 Breathing Room · P2 Tidy · P3 Tight |
 | **L** Labels | chapter cards and lower thirds | L1 Editorial Labels · L2 Spaced Chapters · L3 Line Chapters |
 
-Starting points: **Podcast clip** `O1 W1 A2 G2 S2 P2 L1` · **Talking-head Reel** `O6 W3 A3 G5 S4 P3` · **Cinematic talk** `O4 W4 A2 G6 S1 P1 L2` · **Corporate explainer** `O3 W1 A2 G4 S1 P2 L3`. A Claude skill in [`integrations/lionstone-styles`](integrations/lionstone-styles) edits with these codes.
+| Recipe | Code | Feel |
+|---|---|---|
+| **Podcast clip** | `O1 W1 A2 G2 S2 P2 L1` | calm, readable, loudness for audio apps |
+| **Talking-head Reel** | `O6 W3 A3 G5 S4 P3` | fast hook, highlighted words, phone-friendly sound |
+| **Cinematic talk** | `O4 W4 A2 G6 S1 P1 L2` | slow, premium, no captions on the picture |
+| **Corporate explainer** | `O3 W1 A2 G4 S1 P2 L3` | clean, cool and tidy |
+
+```bash
+lionstone styles                          # list every style
+lionstone styles --group O                # one group
+lionstone styles --cmd O6 W3 A3 G5 S4 P3  # print the exact edit command
+lionstone styles --open                   # open the visual style guide
+```
+
+A Claude skill in [`integrations/lionstone-styles`](integrations/lionstone-styles) edits your videos with these codes — just ask for "a Talking-head Reel, but with a film grade".
 
 ---
 
