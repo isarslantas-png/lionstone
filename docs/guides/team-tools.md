@@ -1,17 +1,17 @@
 # One look for the whole team: brand kits and roles
 
-The team tools sit on top of the [creative features](pro.md) and are free for any number of people. They are what a
+The team tools sit on top of the [creative features](creative-features.md) and are free for any number of people. They are what a
 team needs to keep every editor and every episode on brand: a shared workspace, roles, brand kits,
 versioned and locked presets, and batch apply. Everything below is a real run with two team members
 on the same sample episode.
 
-![Lionstone Studio: one look for the whole team](img/studio-steps.png)
+![Lionstone Pro & Studio: one look for the whole team](img/team-tools-steps.png)
 
 ---
 
 ## Step 1 — Install and say who you are
 
-Each person installs Lionstone as in the [creative features guide](pro.md#step-1--install). Then each person
+Each person installs Lionstone as in the [creative features guide](creative-features.md#step-1--install). Then each person
 tells Lionstone who they are, once per computer — roles follow this email:
 
 ```bash
@@ -102,7 +102,7 @@ Fonts and logos must state their licence; missing files are reported when the ki
 
 ## Step 5 — Apply it to an episode
 
-After the usual `lionstone edit` ([free guide](free.md#step-3--edit-with-one-command)):
+After the usual `lionstone edit` ([first-video guide](first-video.md#step-3--edit-with-one-command)):
 
 ```bash
 lionstone brand apply ep12_lionstone/plan.json "Studio Notes"
@@ -123,7 +123,7 @@ brand-kit  dip-to-black      join    brand transition at topic change (Studio No
 brand-kit  dip-to-black      join    brand transition at topic change (Studio Notes)
 ```
 
-![One brand kit, applied with one command](img/studio-result.jpg)
+![One brand kit, applied with one command](img/team-tools-result.jpg)
 
 ## Step 6 — A whole season
 

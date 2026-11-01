@@ -1,18 +1,18 @@
 # Finishing a video: the creative features
 
-Lionstone's creative features take the edit from the [free guide](free.md) and finishes it: a consistent look,
+Lionstone's creative features take the edit from the [first-video guide](first-video.md) and finishes it: a consistent look,
 transitions, animated text, an agent that proposes all of it and explains why, then Shorts & Reels
 and project files for your editing software. Everything below is a real run on the same sample
-episode. They are free and open source, like the rest of Lionstone.
+episode. Like the rest of Lionstone Pro & Studio, they are free and open source.
 
-![Lionstone Pro: finish, decide, deliver](img/pro-steps.png)
+![Lionstone Pro & Studio: finish, decide, deliver](img/creative-features-steps.png)
 
 ---
 
 ## Step 1 — Install
 
 Nothing to buy and nothing to activate. With the core installed
-([free guide, step 1](free.md#step-1--install)), add NumPy (and OpenCV for face-following crops):
+([first-video guide, step 1](first-video.md#step-1--install)), add NumPy (and OpenCV for face-following crops):
 
 ```bash
 pip install "lionstone[extras] @ git+https://github.com/ismailarslantas/lionstone"
@@ -65,7 +65,7 @@ lionstone fx show look-golden-hour
 lionstone fx preview look-golden-hour --input ep12.mp4 --start 20 --before-after
 ```
 
-![Preview: before and after](img/pro-preview.jpg)
+![Preview: before and after](img/creative-features-preview.jpg)
 
 The preview uses the same code as the final render, so what you see is what you get.
 
@@ -118,7 +118,7 @@ lionstone fx render ep12_lionstone/plan.json
 Pro adds five checks to QA: stale plans, more than 3 flashes per second, exposure, saturation and
 graphics covering faces.
 
-![Pro finishing on the same episode](img/pro-result.jpg)
+![Pro finishing on the same episode](img/creative-features-result.jpg)
 
 ## Step 6 — Reuse the episode
 
@@ -129,7 +129,7 @@ title and word-highlight captions:
 lionstone clips ep12_lionstone/plan.json -n 2
 ```
 
-![Shorts & Reels from the same episode](img/pro-shorts.png)
+![Shorts & Reels from the same episode](img/creative-features-shorts.png)
 
 **Project files for your editing software:**
 
@@ -157,4 +157,4 @@ The project points at your original media, so you can keep refining in your edit
 
 ---
 
-Working as a team? The [team guide](studio.md) covers brand kits, roles and shared presets.
+Working as a team? The [team guide](team-tools.md) covers brand kits, roles and shared presets.

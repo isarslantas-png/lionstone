@@ -291,7 +291,7 @@ def cmd_doctor(a: argparse.Namespace) -> int:
     line(bool(shutil.which("node")), "node (Remotion)", shutil.which("node") or
          "optional — needed only for Remotion previews/renders")
     reg = registry()
-    line(True, "tiers", ", ".join(sorted(reg.tiers)))
+    line(True, "edition", "Lionstone Pro & Studio (every feature unlocked)")
     for p in reg.loaded:
         line(p["status"] == "ok", f"plugin {p['name']}", p["status"])
     if not reg.loaded:

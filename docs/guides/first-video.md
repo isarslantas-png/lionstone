@@ -1,10 +1,10 @@
-# Your first video with Lionstone (free)
+# Your first video with Lionstone Pro & Studio
 
 From a raw recording to a finished, captioned video, step by step. Everything in this guide is real:
-the screenshots and outputs come from editing the sample episode below with Lionstone 0.1 on Windows.
+the screenshots and outputs come from editing the sample episode below with Lionstone Pro & Studio on Windows.
 The same commands work on macOS and Linux.
 
-![Lionstone (free): from recording to finished video](img/free-steps.png)
+![Lionstone Pro & Studio: from recording to finished video](img/first-video-steps.png)
 
 **You'll end up with:** an edited video without long pauses or filler words, an opening title, a
 speaker lower third, burned-in captions plus `.srt` / `.vtt` files, broadcast-safe loudness, a closing
@@ -19,7 +19,7 @@ card and a QA report that tells you whether the file is safe to publish.
 A 63-second podcast intro, recorded in one take: a host talking to camera, with long pauses, an
 "um" and an "uh" — exactly what a real first take looks like.
 
-![Before and after](img/free-before-after.jpg)
+![Before and after](img/first-video-before-after.jpg)
 
 ---
 
@@ -63,7 +63,7 @@ lionstone doctor
   ✅ faster-whisper     installed
   ✅ title font         C:/Windows/Fonts/arialbd.ttf
   ✅ node (Remotion)    C:\Program Files\nodejs\node.EXE
-  ✅ tiers              free, pro, studio
+  ✅ edition            Lionstone Pro & Studio (every feature unlocked)
   ✅ plugin builtin     ok
 ```
 
@@ -115,7 +115,7 @@ Lionstone works in a fixed order: it **validates** the file, **transcribes** it 
 finally **checks** the result. Deciding and rendering are separate, so every edit can be explained,
 undone and re-rendered.
 
-![What Lionstone cut, and why](img/free-timeline.png)
+![What Lionstone cut, and why](img/first-video-timeline.png)
 
 Pauses are shortened, not removed completely: a short "sentence beat" is kept so the speech still
 breathes. The "Umm" was cut together with the pause around it.
@@ -131,7 +131,7 @@ ep12_lionstone/
   qa.md             ← the QA report
 ```
 
-![What the free edit delivers](img/free-result.jpg)
+![What the first edit delivers](img/first-video-result.jpg)
 
 The lower third appears the first time Anna speaks, and the captions move up while it is on screen,
 so the two never overlap.
@@ -219,7 +219,7 @@ See [examples/README.md](../../examples/README.md).
 
 ## Want more?
 
-The [creative features](pro.md) are part of Lionstone too, and free: looks, effects, transitions,
+The [creative features](creative-features.md) are part of the same package: looks, effects, transitions,
 animated text, an agent that picks them and explains why, Shorts & Reels, multicam and
-Resolve / Final Cut / Premiere export. The [team guide](studio.md) covers brand kits and roles.
+Resolve / Final Cut / Premiere export. The [team guide](team-tools.md) covers brand kits and roles.
 → [Feature overview](../PRO.md)

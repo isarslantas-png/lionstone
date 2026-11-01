@@ -141,9 +141,9 @@ Check your setup any time with `lionstone doctor`.
 
 | | Guide | You'll learn |
 |---|---|---|
-| ![](docs/guides/img/free-timeline.png) | **[Your first video](docs/guides/free.md)** | install, one-command edit, captions, reading the QA report, editing by text, restoring cuts |
-| ![](docs/guides/img/pro-shorts.png) | **[Creative features](docs/guides/pro.md)** | the agent, looks / transitions / animated text, previews, Shorts & Reels, Resolve / Final Cut / Premiere export |
-| ![](docs/guides/img/studio-result.jpg) | **[Team tools](docs/guides/studio.md)** | roles per person, brand kits, locked presets with history, batch apply for a season |
+| ![](docs/guides/img/first-video-timeline.png) | **[Your first video](docs/guides/first-video.md)** | install, one-command edit, captions, reading the QA report, editing by text, restoring cuts |
+| ![](docs/guides/img/creative-features-shorts.png) | **[Creative features](docs/guides/creative-features.md)** | the agent, looks / transitions / animated text, previews, Shorts & Reels, Resolve / Final Cut / Premiere export |
+| ![](docs/guides/img/team-tools-result.jpg) | **[Team tools](docs/guides/team-tools.md)** | roles per person, brand kits, locked presets with history, batch apply for a season |
 
 ## 🧭 How it works
 
@@ -233,7 +233,7 @@ Every feature is free and open source (Apache-2.0): no license key, no account, 
 | **Vision QA**: graphics/captions covering faces | `pip install "lionstone[vision]"` |
 | **Lionstone Styles**: codes like `O4 W3 A3 G5 S4 P3` that map to real edit options | `lionstone styles --open` · `--cmd O4 W3 A3` |
 
-Install everything with `pip install "lionstone[all] @ git+https://github.com/ismailarslantas/lionstone"`. Details: [docs/PRO.md](docs/PRO.md) and the [guides](docs/guides/pro.md).
+Install everything with `pip install "lionstone[all] @ git+https://github.com/ismailarslantas/lionstone"`. Details: [docs/PRO.md](docs/PRO.md) and the [guides](docs/guides/creative-features.md).
 
 ## 🗺️ Roadmap
 
@@ -241,7 +241,7 @@ See [ROADMAP.md](ROADMAP.md). Next up: built-in speaker diarization, segment-lev
 
 ## 🤝 Contributing
 
-PRs welcome — especially filler lexicons for your language, new free effects, and QA checks. Start with [CONTRIBUTING.md](CONTRIBUTING.md); AI coding agents should read [AGENTS.md](AGENTS.md).
+PRs welcome — especially filler lexicons for your language, new effects, and QA checks. Start with [CONTRIBUTING.md](CONTRIBUTING.md); AI coding agents should read [AGENTS.md](AGENTS.md).
 
 ```bash
 git clone https://github.com/ismailarslantas/lionstone && cd lionstone

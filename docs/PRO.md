@@ -1,10 +1,10 @@
-# Creative features — formerly Pro & Studio, now free
+# Lionstone Pro & Studio — feature guide
 
-Everything that used to be sold as Lionstone Pro or Studio ships in the open core under Apache-2.0.
-There are no license keys, no activation, no watermarks and no locked presets. The old tier names
-(`free` / `pro` / `studio`) only remain as labels in the catalog (`lionstone fx list --tier studio`).
+Lionstone Pro & Studio (v0.3.0 and v0.3.1) is one free, open-source package under Apache-2.0.
+There are no license keys, no activation, no watermarks and no locked presets: every feature below
+is available to everyone, individuals and teams alike.
 
-**Step-by-step guides:** [your first video](guides/free.md) · [creative features](guides/pro.md) · [team tools](guides/studio.md)
+**Step-by-step guides:** [your first video](guides/first-video.md) · [creative features](guides/creative-features.md) · [team tools](guides/team-tools.md)
 
 ## What you get
 
@@ -60,8 +60,8 @@ in a source checkout; without it P03-P06 render with their FFmpeg versions and P
 `lionstone styles --cmd O4 W3 A3` prints the edit command, `--open` shows the visual guide, and
 `integrations/lionstone-styles` is a Claude skill that edits with them.
 
-## Upgrading from the commercial plugin
+## Upgrading from the separate `lionstone-pro` package
 
 If you installed `lionstone-pro`, uninstall it (`pip uninstall lionstone-pro`): the same features are
-now built in. `lionstone pro activate/status/renew` no longer exist; `lionstone pro whoami` became
+now in `lionstone`. `lionstone pro activate/status/renew` no longer exist; `lionstone pro whoami` became
 `lionstone whoami`. Any license key you bought keeps your thanks, not a restriction.
