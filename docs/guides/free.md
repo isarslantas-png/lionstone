@@ -52,14 +52,19 @@ lionstone doctor
 ```
 
 ```text
-🦁 Lionstone — AI editing agent · v0.1.0
+🦁 Lionstone — AI editing agent · v0.3.0
   ✅ ffmpeg             ffmpeg version 9.0.2-full_build …
   ✅   filter drawtext  available
   ✅   filter subtitles available
   ✅   filter loudnorm  available
+  ✅   filter ebur128   available
+  ✅   filter afftdn    available
+  ✅   filter lut3d     available
   ✅ faster-whisper     installed
   ✅ title font         C:/Windows/Fonts/arialbd.ttf
-  ✅ tiers              free
+  ✅ node (Remotion)    C:\Program Files\nodejs\node.EXE
+  ✅ tiers              free, pro, studio
+  ✅ plugin builtin     ok
 ```
 
 Every line should be ✅. A ❌ next to a filter means your FFmpeg build lacks it; Lionstone still edits
